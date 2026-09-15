@@ -12,7 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>SmartClinic+ | Dashboard</title>
+    <title>SmartClinic+ | Home</title>
     <link rel="icon" type="image/x-icon" href="../images/logoo.png">
 
   </head>
@@ -27,15 +27,36 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ralewayextrabold nav-text">
       <a class="nav-item nav-link nav-text1 active" href="index.html">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link nav-text2" href="dashboard.html">Dashboard</a>
       <a class="nav-item nav-link nav-text1" href="appointments.html">Appointments</a>
       <a class="nav-item nav-link nav-text2" href="records.html">Records</a>
-      <a class="nav-item nav-link nav-text1" href="prescriptions.html">Prescriptions</a>
-    </div>
-  </div>
+      <a class="nav-item nav-link nav-text1" href="prescriptions.html">Prescriptions</a> -->
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ralewayextrabold nav-text">
+          <li class="nav-item active">
+            <a class="nav-item nav-link nav-text1 active" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link nav-text2" href="patients.html">For Patients</a>
+          </li>
+          <li class="nav-item dropdown nav-text1">
+            <a class="nav-link dropdown-toggle nav-text1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              For Staff
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item nav-text2" href="doctorsdashboard.html">Doctor Dashboard</a>
+              <a class="dropdown-item nav-text2" href="tasks.html">Tasks</a>
+              <a class="dropdown-item nav-text2" href="patientrecords.html">Patient Records</a>
+            </div>
+          </li>
+        </ul>
+        </div>
+    <!-- </div>
+  </div> -->
 </nav>
 <!-- THIS IS THE END OF THE NAV BAR (MENU SECTION) -->
 
@@ -57,6 +78,12 @@
   
 </section>
 <!-- This is the end of the third-block -->
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!-- start of footer -->
 
@@ -88,16 +115,13 @@
             Quick links
           </h6>
           <p>
-            <a href="dashboard.html" class="footer-links ralewaybold">Dashboard</a>
+            <a href="index.html" class="footer-links ralewaybold">Home</a>
           </p>
           <p>
-            <a href="appointments.html" class="footer-links ralewaybold">Appointments</a>
+            <a href="patients.html" class="footer-links ralewaybold">Booking</a>
           </p>
           <p>
-            <a href="records.html" class="footer-links ralewaybold">Records</a>
-          </p>
-          <p>
-            <a href="prescriptions.html" class="footer-links ralewaybold">Prescriptions</a>
+            <a href="patients.html" class="footer-links ralewaybold">Patients</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -113,10 +137,7 @@
             <a href="#" class="footer-links ralewaybold">Contact</a>
           </p>
           <p>
-            <a href="#" class="footer-links ralewaybold">Privacy Policy</a>
-          </p>
-          <p>
-            <a href="#" class="footer-links ralewaybold">Terms</a>
+            <a href="#" class="footer-links ralewaybold">Privacy Policy and Terms</a>
           </p>
         </div>
         <!-- Grid column -->
