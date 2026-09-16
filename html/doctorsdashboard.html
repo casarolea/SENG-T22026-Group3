@@ -12,7 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>SmartClinic+ | Doctor Dashboard</title>
+    <title>SmartClinic+ | Home</title>
     <link rel="icon" type="image/x-icon" href="../images/logoo.png">
 
   </head>
@@ -61,138 +61,304 @@
 <!-- THIS IS THE END OF THE NAV BAR (MENU SECTION) -->
 
 
-<!-- This is the start of the first-block -->
-<section class = "first-block">
-  <div class="row">
-    <!-- Sidebar (vertical pills) -->
-    <div class="col-3">
-      <div class="nav flex-column nav-pills" id="dashboard-tab" role="tablist">
-        <a class="nav-link active" id="overview-tab" data-toggle="pill" href="#overview" role="tab">Overview</a>
-        <a class="nav-link" id="schedule-tab" data-toggle="pill" href="#schedule" role="tab">Schedule</a>
-        <a class="nav-link" id="patients-tab" data-toggle="pill" href="#patients" role="tab">My Patients</a>
+<main>
+    <!-- ========================================================
+         FIRST BLOCK:  (Doctor Overview & Shift Metrics)
+         ======================================================== -->
+    <section id="doctor-overview" class="block block-first">
+      <div class="container">
+        
+        <div class="dashboard-hero">
+          <div>
+            <div class="badge">Clinical Workflow Portal</div>
+            <h1>Doctor Consultation Dashboard</h1>
+            <p class="hero-desc">
+              Welcome back, <strong>Dr. Sarah Adams</strong>. You have 4 patients waiting in your queue today.
+            </p>
+          </div>
+          <div class="dashboard-date-badge">
+            <span class="date-lbl">Today's Shift</span>
+            <strong>Wednesday, 16 Sept 2026</strong>
+          </div>
+        </div>
+
+        <!-- Metric Stat Cards -->
+        <div class="overview-grid">
+          <div class="overview-card stat-card">
+            <div class="card-icon">👥</div>
+            <div class="stat-number">14</div>
+            <h3>Today's Total Patients</h3>
+            <p>9 booked, 5 walk-in check-ins</p>
+          </div>
+
+          <div class="overview-card stat-card">
+            <div class="card-icon">⏳</div>
+            <div class="stat-number" id="waitingCount">4</div>
+            <h3>Currently Waiting</h3>
+            <p>Average wait time: 11 mins</p>
+          </div>
+
+          <div class="overview-card stat-card">
+            <div class="card-icon">✅</div>
+            <div class="stat-number" id="completedCount">5</div>
+            <h3>Completed Consultations</h3>
+            <p>Notes & E-Rx transmitted</p>
+          </div>
+
+          <div class="overview-card stat-card">
+            <div class="card-icon">🧪</div>
+            <div class="stat-number">1</div>
+            <h3>Pending Lab Review</h3>
+            <p>Pathology alert for Room 102</p>
+          </div>
+        </div>
+
       </div>
-    </div>
-  
-    <!-- Content that switches -->
-    <div class="col-9">
-      <div class="tab-content" id="dashboard-tabContent">
-  
-        <!-- OVERVIEW -->
-        <div class="tab-pane fade show active" id="overview" role="tabpanel">
-          <div class="row mb-3">
-            <div class="col-4">
-              <div class="card p-3">
-                <small class="text-muted">Patients today</small>
-                <h4>12</h4>
-              </div>
+    </section>
+
+    <!-- ========================================================
+         SECOND BLOCK: (Patient Queue & Task Delegation)
+         ======================================================== -->
+    <section id="schedule-section" class="block block-second">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="sub-heading">Real-Time Queue Management</span>
+          <h2>Appointment Schedule & Waiting List</h2>
+          <p>Click "Select for Consultation" to load patient records directly into the clinical workspace below.</p>
+        </div>
+
+        <div class="two-col-grid">
+          
+          <!-- Appointment Schedule Table -->
+          <div class="card interactive-card">
+            <div class="card-title-bar">
+              <span class="pill-tag">Live Queue Tracker</span>
+              <h3>Today's Patient Roster</h3>
             </div>
-            <div class="col-4">
-              <div class="card p-3">
-                <small class="text-muted">Avg wait time</small>
-                <h4>14 min</h4>
-              </div>
+
+            <div class="table-container">
+              <table class="clinic-table">
+                <thead>
+                  <tr>
+                    <th>Time / Queue</th>
+                    <th>Patient Name</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="patientTableBody">
+                  <tr class="active-patient-row" onclick="selectPatient('Liam Carter', '34 yrs, Male', '#SC-2098', 'Penicillin', 'Persistent dry cough & mild fever for 3 days', 'BP: 120/78 | Temp: 37.8°C | SpO2: 99%')">
+                    <td><strong>09:30 AM</strong><br><small class="text-muted">Q-104</small></td>
+                    <td><strong>Liam Carter</strong><br><small>34y / M</small></td>
+                    <td>Dry cough & fever</td>
+                    <td><span class="status-badge warning">In Consultation</span></td>
+                    <td><button class="btn btn-primary btn-sm">Active</button></td>
+                  </tr>
+                  <tr onclick="selectPatient('Emily Watson', '28 yrs, Female', '#SC-2104', 'No known allergies', 'Routine wellness checkup and blood pressure monitoring', 'BP: 118/75 | Temp: 36.6°C | SpO2: 100%')">
+                    <td><strong>10:00 AM</strong><br><small class="text-muted">Q-105</small></td>
+                    <td><strong>Emily Watson</strong><br><small>28y / F</small></td>
+                    <td>Wellness Checkup</td>
+                    <td><span class="status-badge success">Ready in Waiting</span></td>
+                    <td><button class="btn btn-secondary btn-sm">Select</button></td>
+                  </tr>
+                  <tr onclick="selectPatient('Robert Davis', '52 yrs, Male', '#SC-1940', 'Sulfa drugs', 'Type 2 Diabetes follow-up & fasting blood glucose review', 'BP: 135/85 | Temp: 36.8°C | SpO2: 98%')">
+                    <td><strong>10:30 AM</strong><br><small class="text-muted">Q-106</small></td>
+                    <td><strong>Robert Davis</strong><br><small>52y / M</small></td>
+                    <td>Diabetes Review</td>
+                    <td><span class="status-badge success">Checked In</span></td>
+                    <td><button class="btn btn-secondary btn-sm">Select</button></td>
+                  </tr>
+                  <tr onclick="selectPatient('Sophia Chen', '41 yrs, Female', '#SC-2211', 'Aspirin', 'Migraine recurrence and prescription renewal', 'BP: 122/80 | Temp: 36.7°C | SpO2: 99%')">
+                    <td><strong>11:15 AM</strong><br><small class="text-muted">Q-107</small></td>
+                    <td><strong>Sophia Chen</strong><br><small>41y / F</small></td>
+                    <td>Migraine Consultation</td>
+                    <td><span class="status-badge">Scheduled</span></td>
+                    <td><button class="btn btn-secondary btn-sm">Select</button></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="col-4">
-              <div class="card p-3">
-                <small class="text-muted">In queue now</small>
-                <h4>3</h4>
+          </div>
+
+          <!-- Nurse Task Delegation & Coordination -->
+          <div class="card interactive-card">
+            <div class="card-title-bar">
+              <span class="pill-tag">Clinical Coordination</span>
+              <h3>Nurse & Staff Delegation</h3>
+            </div>
+
+            <p class="field-label">Assign Quick Task to On-Duty Nurse:</p>
+            <form id="delegateTaskForm" class="task-form">
+              <div class="form-group">
+                <input type="text" id="newTaskDesc" placeholder="e.g., Collect blood sample for Room 102 patient" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <select id="assignedStaff">
+                    <option value="Nurse Claire (Triage)">Nurse Claire (Triage)</option>
+                    <option value="Nurse David (Pathology Prep)">Nurse David (Pathology Prep)</option>
+                    <option value="Nurse Priya (Treatment Room)">Nurse Priya (Treatment Room)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-full">+ Dispatch Task</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="assigned-tasks-list">
+              <p class="field-label">Active Dispatched Tasks:</p>
+              <ul class="task-list" id="assignedTasksContainer">
+                <li class="task-item">
+                  <input type="checkbox" id="dTask1" checked>
+                  <label for="dTask1"><strong>Nurse Claire:</strong> Take pre-consult vitals for Liam Carter</label>
+                </li>
+                <li class="task-item">
+                  <input type="checkbox" id="dTask2">
+                  <label for="dTask2"><strong>Nurse David:</strong> Prep blood glucose meter for Robert Davis (10:30 AM)</label>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         THIRD BLOCK: (Active Patient Workspace & E-Prescription)
+         ======================================================== -->
+    <section id="consultation-workspace" class="block block-third">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="sub-heading">Module 2 & 3 Central Hub</span>
+          <h2>Active Consultation, EHR & E-Prescription</h2>
+          <p>Integrated medical records, digital clinical assessment, and instant e-prescription transmission.</p>
+        </div>
+
+        <!-- Active Patient Header Banner -->
+        <div class="patient-record-header">
+          <div class="patient-avatar">👤</div>
+          <div class="patient-meta">
+            <h3 id="currentPatientName">Liam Carter</h3>
+            <p>
+              <span id="currentPatientDemographics">34 yrs, Male</span> | 
+              <strong>Record ID:</strong> <span id="currentPatientId">#SC-2098</span> | 
+              <span class="allergy-alert">⚠️ Allergy: <strong id="currentPatientAllergies">Penicillin</strong></span>
+            </p>
+          </div>
+          <div class="vitals-chip" id="currentPatientVitals">
+            BP: 120/78 | Temp: 37.8°C | SpO2: 99%
+          </div>
+        </div>
+
+        <div class="two-col-grid">
+          
+          <!-- Consultation Notes & EHR Assessment -->
+          <div class="card">
+            <div class="card-title-bar">
+              <span class="pill-tag">Clinical Assessment</span>
+              <h3>Consultation Notes (EHR)</h3>
+            </div>
+
+            <form id="consultationForm">
+              <div class="form-group">
+                <label>Chief Complaint & History</label>
+                <textarea id="chiefComplaint" rows="2" class="form-textarea">Persistent dry cough and mild fever for 3 days. No shortness of breath.</textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Doctor's Clinical Findings & Diagnosis</label>
+                <textarea id="clinicalDiagnosis" rows="3" class="form-textarea">Chest clear to auscultation bilaterally. Throat mildly erythematous. Diagnosed with Acute Viral Upper Respiratory Tract Infection.</textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Recommended Care Plan</label>
+                <textarea id="carePlan" rows="2" class="form-textarea">Adequate oral hydration, rest for 48 hours, monitor temperature twice daily.</textarea>
+              </div>
+
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary" onclick="saveEhrRecord()">Save & Sync to EHR</button>
+                <button type="button" class="btn btn-secondary" onclick="markConsultationComplete()">Mark Visit Completed</button>
+              </div>
+            </form>
+
+            <div id="ehrSaveStatus" class="status-box hidden" style="margin-top: 15px;">
+              <div class="status-icon">🔒</div>
+              <div>
+                <strong>EHR Record Secured & Encrypted!</strong>
+                <p>Saved under Role-Based Access Control (Doctor & Patient only).</p>
               </div>
             </div>
           </div>
-  
-          <div class="card p-3">
-            <h6>Patient Queue — Today</h6>
-            <table class="table">
-              <thead>
-                <tr><th>Patient</th><th>Time</th><th>Status</th><th>Actions</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>M. Chen</td>
-                  <td>9:00–9:30</td>
-                  <td><span class="badge badge-primary">in progress</span></td>
-                  <td>
-                    <a href="patientsrecord.html">View Record</a> |
-                    <a href="#" data-toggle="modal" data-target="#prescribeModal">Prescribe</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>A. Osei</td>
-                  <td>9:30–10:00</td>
-                  <td><span class="badge badge-secondary">waiting</span></td>
-                  <td>
-                    <a href="patientsrecord.html">View Record</a> |
-                    <a href="#" data-toggle="modal" data-target="#prescribeModal">Prescribe</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+          <!-- Digital E-Prescription & Diagnostic Orders -->
+          <div class="card">
+            <div class="card-title-bar">
+              <span class="pill-tag">E-Prescription Module</span>
+              <h3>Digital Prescription Generator</h3>
+            </div>
+
+            <form id="eRxForm">
+              <div class="form-group">
+                <label for="medName">Medication Name & Strength</label>
+                <input type="text" id="medName" placeholder="e.g. Paracetamol 500mg" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="medDosage">Dosage / Frequency</label>
+                  <input type="text" id="medDosage" placeholder="e.g. 1 tablet every 6 hours" required>
+                </div>
+                <div class="form-group">
+                  <label for="medDuration">Duration</label>
+                  <input type="text" id="medDuration" placeholder="e.g. 5 days" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="medInstructions">Special Instructions</label>
+                <input type="text" id="medInstructions" placeholder="e.g. Take after meals; avoid alcohol">
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">+ Add Medication to Digital Rx</button>
+            </form>
+
+            <!-- Generated Digital Prescription Preview -->
+            <div class="rx-container">
+              <div class="rx-header">
+                <strong>Current E-Prescription Items</strong>
+                <span class="badge-tag">Digital Signature: Dr. Sarah Adams, MD</span>
+              </div>
+              <ul class="rx-list" id="prescriptionItemsList">
+                <li>
+                  <strong>Paracetamol 500mg</strong> — 1-2 tablets as needed for fever (5 days)
+                  <small class="text-muted"><br>Take after food with water.</small>
+                </li>
+                <li>
+                  <strong>Saline Nasal Spray</strong> — 2 sprays per nostril twice daily (7 days)
+                  <small class="text-muted"><br>For nasal congestion relief.</small>
+                </li>
+              </ul>
+              
+              <div class="rx-actions">
+                <button class="btn btn-primary" onclick="transmitRx('Partner Pharmacy')">Transmit to Partner Pharmacy</button>
+                <button class="btn btn-secondary" onclick="transmitRx('Patient SMS & App')">Send to Patient SMS</button>
+              </div>
+            </div>
+
           </div>
+
         </div>
-  
-        <!-- SCHEDULE -->
-        <div class="tab-pane fade" id="schedule" role="tabpanel">
-          <h5>My Schedule</h5>
-          <p class="text-muted">Tuesday, 22 September 2026</p>
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between">
-              <span>9:00am — M. Chen, General checkup</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>9:30am — A. Osei, Follow-up</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between text-muted">
-              <span>10:00am — Open slot</span>
-            </li>
-          </ul>
-        </div>
-  
-        <!-- MY PATIENTS -->
-        <div class="tab-pane fade" id="patients" role="tabpanel">
-          <h5>My Patients <small class="text-muted">18 total</small></h5>
-          <table class="table">
-            <thead>
-              <tr><th>Patient</th><th>Last visit</th><th>Next appt</th><th>Actions</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>M. Chen</td><td>22 Sep</td><td>—</td>
-                <td><a href="patientsrecord.html">View Record</a></td>
-              </tr>
-              <tr>
-                <td>A. Osei</td><td>22 Sep</td><td>6 Oct</td>
-                <td><a href="patientsrecord.html">View Record</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-  
+
       </div>
-    </div>
-  </div>
-</section>
-<!-- This is the end of the first-block -->
-
-<!-- This is the start of the second-block -->
-<section class = "second-block">
-  
-</section>
-<!-- This is the end of the second-block -->
-
-<!-- This is the start of the third-block -->
-<section class = "third-block">
-  
-</section>
-<!-- This is the end of the third-block -->
-
-<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- start of footer -->
-
+    </section>
+  </main>
  <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted footer">
 
