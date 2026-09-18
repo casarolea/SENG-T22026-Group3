@@ -77,7 +77,7 @@
 
           <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
             <div>
-              <h5 class="dash-heading mb-0 ralewayextrabold">Welcome back, Dr. Bennett</h5>
+              <h5 class="dash-heading mb-0 ralewayextrabold">Doctor Dashboard</h5>
               <small class="dash-subtext">Wednesday, 30 September 2026</small>
             </div>
             </div>
@@ -104,37 +104,40 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-7 mb-3">
+            <div class="col-lg-10 mb-3">
               <div class="card dash-card p-3 h-100">
                 <h6 class="mb-3">Quick Patient Queue</h6>
                 <table class="table table-borderless mb-0 align-middle">
                   <thead>
-                    <tr class="dash-subtext"><th>Patient</th><th>Time</th><th>Status</th><th>Action</th></tr>
+                    <tr class="dash-subtext"><th>Patient</th><th>Time</th><th>Status</th><th>Action</th> <th>Prescribe</th></tr>
                   </thead>
                   <tbody>
-                    <tr data-row="chen">
+                    <tr data-row="dejucos">
                       <td>C. Dejucos</td>
                       <td>9:30–10:00</td>
                       <td><span class="badge badge-inprogress">In progress</span></td>
                       <td class="text-right">
-                        <button class="btn btn-sm btn-action-green" onclick="completeAppointment(this,'chen')">Complete</button>
+                        <button class="btn btn-sm btn-action-green" onclick="completeAppointment(this,'dejucos')">Complete</button>
                       </td>
+                    <td><button class="btn btn-sm btn-primary" onclick="openPrescription('C. Dejucos')"> Prescribe</button></td>
                     </tr>
-                    <tr data-row="osei">
+                    <tr data-row="dhungana">
                       <td>M. Dhungana</td>
                       <td>10:00–10:30</td>
                       <td><span class="badge badge-waiting">Waiting</span></td>
                       <td class="text-right">
-                        <button class="btn btn-sm btn-action-blue" onclick="checkInAppointment(this,'osei')">Start</button>
+                        <button class="btn btn-sm btn-action-blue" onclick="checkInAppointment(this,'dhungana')">Start</button>
                       </td>
+                      <td><button class="btn btn-sm btn-primary" onclick="openPrescription('M. Dhungana')"> Prescribe</button></td>
                     </tr>
-                    <tr data-row="ade">
+                    <tr data-row="manalo">
                       <td>G. Manalo</td>
                       <td>1:00–1:30</td>
                       <td><span class="badge badge-waiting">Upcoming</span></td>
                       <td class="text-right">
-                        <button class="btn btn-sm btn-action-blue" onclick="checkInAppointment(this,'ade')">Start</button>
+                        <button class="btn btn-sm btn-action-blue" onclick="checkInAppointment(this,'manalo')">Start</button>
                       </td>
+                    <td><button class="btn btn-sm btn-primary" onclick="openPrescription('G. Manalo')"> Prescribe</button></td>
                     </tr>
                   </tbody>
                 </table>
@@ -209,6 +212,17 @@
           </div>
 
             </div>
+            
+<!---------Add Prescription-->
+
+<div class="card dash-card p-4 mt-3" id="prescriptionForm" style="display:none;">
+  <h5>Create Prescription</h5>
+    <label class="mt-3">Patient ID</label>
+      <input type="text" id="patientId" class="form-control" placeholder="Enter Patient ID" required>
+        <div class="mt-3"><label><input type="checkbox" id="notifySMS">Send SMS to Patient</label></div>
+          <div class="mt-2 mb-3"><label><input type="checkbox" id="sendPharmacy">Send to Partner Pharmacy</label></div>
+            <button class="btn btn-success" onclick="confirmPrescription()">Confirm & Send</button>
+</div>
 
         <!-- MY PATIENTS -->
         <div class="tab-pane fade" id="patients" role="tabpanel">
@@ -222,11 +236,11 @@
                 <div class="dash-subtext small">C.Dejucos@email.com · (04) 123 4567</div>
               </div>
               <div class="mt-2 mt-md-0">
-                <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-chen">View Details</button>
+                <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-dejucos">View Details</button>
                 <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('C.Dejucos')">Add Note</button>
               </div>
             </div>
-            <div class="collapse patient-detail p-3 mt-3" id="detail-chen">
+            <div class="collapse patient-detail p-3 mt-3" id="detail-dejucos">
               <div class="row">
                 <div class="col-md-6">
                   <h6>Age</h6>
@@ -253,6 +267,7 @@
             </div>
             </div>
 
+
  <!-- PATIENT 2 -->
           <div class="card dash-card patient-row p-3 mb-3">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
@@ -262,11 +277,11 @@
                 <div class="dash-subtext small">G. Manalo@email.com · (04) 987 6543</div>
               </div>
               <div class="mt-2 mt-md-0">
-                <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-osei">View Details</button>
+                <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-manalo">View Details</button>
                 <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('G. Manalo')">Add Note</button>
               </div>
             </div>
-            <div class="collapse patient-detail p-3 mt-3" id="detail-osei">
+            <div class="collapse patient-detail p-3 mt-3" id="detail-manalo">
               <div class="row">
                 <div class="col-md-6">
                   <h6>Age</h6>
@@ -461,6 +476,7 @@
 </section>
 
 <!-- Add Note Modal -->
+
 <div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -650,6 +666,45 @@
     }
   }
 
+  function openPrescription(patientName) {
+
+  document.getElementById("prescriptionForm").style.display = "block";
+
+  document.getElementById("selectedPatient").value = patientName;
+
+  document.getElementById("prescriptionForm")
+    .scrollIntoView({ behavior: "smooth" });
+}
+
+
+function confirmPrescription() {
+
+  let patient = document.getElementById("selectedPatient").value;
+  let patientId = document.getElementById("patientId").value;
+
+  let sms = document.getElementById("notifySMS").checked;
+  let pharmacy = document.getElementById("sendPharmacy").checked;
+
+
+  if (patientId === "") {
+    alert("Please enter Patient ID.");
+    return;
+  }
+
+
+  if (!sms && !pharmacy) {
+    alert("Please select SMS or Partner Pharmacy.");
+    return;
+  }
+
+
+  alert(
+    "Prescription confirmed!\n\n" +
+    "Patient: " + patient +
+    "\nPatient ID: " + patientId
+  );
+
+}
   function setNotePatient(name) {
     document.getElementById('notePatientName').textContent = name;
   }
