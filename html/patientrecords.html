@@ -12,33 +12,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>SmartClinic+ | Records</title>
+    <title>SmartClinic+ | Patient Records</title>
     <link rel="icon" type="image/x-icon" href="../images/logoo.png">
 
   </head>
 
 <body>
 
-<!-- This is the start of the nav bar -->
- 
 <!-- THIS IS THE START OF THE NAV BAR (MENU SECTION) -->
 <nav class="navbar navbar-expand-lg navbar-light first-block">
   <a class="norwester nav-name" href="index.html"><img class="logo" src="../images/logoo.png" alt="SmartClinic+ Logo" title="SmartClinic+ logo">SmartClinic+</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ralewayextrabold nav-text">
-      <a class="nav-item nav-link nav-text1 active" href="index.html">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link nav-text2" href="dashboard.html">Dashboard</a>
-      <a class="nav-item nav-link nav-text1" href="appointments.html">Appointments</a>
-      <a class="nav-item nav-link nav-text2" href="records.html">Records</a>
-      <a class="nav-item nav-link nav-text1" href="prescriptions.html">Prescriptions</a> -->
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ralewayextrabold nav-text">
-          <li class="nav-item active">
-            <a class="nav-item nav-link nav-text1 active" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-item nav-link nav-text1" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-item nav-link nav-text2" href="patients.html">For Patients</a>
@@ -50,111 +41,211 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item nav-text2" href="doctorsdashboard.html">Doctor Dashboard</a>
               <a class="dropdown-item nav-text2" href="tasks.html">Tasks</a>
-              <a class="dropdown-item nav-text2" href="patientrecords.html">Patient Records</a>
+              <a class="dropdown-item nav-text2 active" href="patientrecords.html">Patient Records</a>
             </div>
           </li>
         </ul>
-        </div>
-    <!-- </div>
-  </div> -->
+      </div>
 </nav>
 <!-- THIS IS THE END OF THE NAV BAR (MENU SECTION) -->
 
-
 <!-- This is the start of the first-block -->
-<section class = "first-block">
+<section class="first-block">
+  <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+    <div>
+      <h5 class="dash-heading mb-0 ralewayextrabold">Patient Records</h5>
+      <small class="dash-subtext">4 patients on file</small>
+    </div>
+    <div class="mt-2 mt-md-0">
+      <input type="text" class="form-control" id="recordSearch" placeholder="Search by name or patient ID..." onkeyup="filterRecords()" style="min-width:260px;">
+    </div>
+  </div>
+
+  <div id="recordsList">
+
+    <!-- PATIENT 1 -->
+    <div class="card dash-card patient-row p-3 mb-3" data-search="c.dejucos pt-0001">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+          <strong class="dash-heading">C. Dejucos</strong>
+          <span class="patient-id">· Patient ID: PT-0001</span>
+          <div class="dash-subtext small">C.Dejucos@email.com · (04) 123 4567</div>
+        </div>
+        <div class="mt-2 mt-md-0">
+          <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#rec-dejucos">View Details</button>
+              </div>
+      </div>
+      <div class="collapse patient-detail p-3 mt-3" id="rec-dejucos">
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Age</h6><p class="small mb-3">20 years</p>
+            <h6>DOB</h6><p class="small mb-3">24 Nov 2000</p>
+            <h6>Gender</h6><p class="small mb-3">Female</p>
+            <h6>Medical History</h6><p class="small mb-3">Mild hypertension – 14 Jan 2026.</p>
+          </div>
+          <div class="col-md-6">
+            <h6>Last Visit</h6><p class="small mb-3">14 Jan</p>
+            <h6>Next Visit</h6><p class="small mb-3">30 Sep</p>
+            <h6>Allergies</h6><p class="small mb-3">Peanuts, Penicillin</p>
+            <h6>Diagnosis History</h6><p class="small mb-3">No major surgeries. Family history of hypertension.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATIENT 2 -->
+    <div class="card dash-card patient-row p-3 mb-3" data-search="g. manalo pt-0005">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+          <strong class="dash-heading">G. Manalo</strong>
+          <span class="patient-id">· Patient ID: PT-0005</span>
+          <div class="dash-subtext small">G.Manalo@email.com · (04) 987 6543</div>
+        </div>
+        <div class="mt-2 mt-md-0">
+          <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#rec-manalo">View Details</button>
+              </div>
+      </div>
+      <div class="collapse patient-detail p-3 mt-3" id="rec-manalo">
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Age</h6><p class="small mb-3">25 years</p>
+            <h6>DOB</h6><p class="small mb-3">24 Nov 2000</p>
+            <h6>Gender</h6><p class="small mb-3">Female</p>
+            <h6>Medical History</h6><p class="small mb-3">Migraine – 15 Sep.</p>
+          </div>
+          <div class="col-md-6">
+            <h6>Last Visit</h6><p class="small mb-3">15 Sep</p>
+            <h6>Next Visit</h6><p class="small mb-3">30 Sep</p>
+            <h6>Allergies</h6><p class="small mb-3">None recorded</p>
+            <h6>Diagnosis History</h6><p class="small mb-3">No major surgeries. No chronic conditions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATIENT 3 -->
+    <div class="card dash-card patient-row p-3 mb-3" data-search="m. dhungana madhav dhungana pt-0003">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+          <strong class="dash-heading">M. Dhungana</strong>
+          <span class="patient-id">· Patient ID: PT-0003</span>
+          <div class="dash-subtext small">M.Dhungana@email.com · (04) 123 4567</div>
+        </div>
+        <div class="mt-2 mt-md-0">
+          <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#rec-dhungana">View Details</button>
+          
+        </div>
+      </div>
+      <div class="collapse patient-detail p-3 mt-3" id="rec-dhungana">
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Name</h6><p class="small mb-3">Madhav Dhungana</p>
+            <h6>Age</h6><p class="small mb-3">21 years</p>
+            <h6>DOB</h6><p class="small mb-3">10 May 2005</p>
+            <h6>Gender</h6><p class="small mb-3">Male</p>
+            <h6>Medical History</h6><p class="small mb-3">Sprained ankle – 04 March 2026.</p>
+          </div>
+          <div class="col-md-6">
+            <h6>Last Visit</h6><p class="small mb-3">04 March</p>
+            <h6>Next Visit</h6><p class="small mb-3">30 Sep</p>
+            <h6>Allergies</h6><p class="small mb-3">Shellfish</p>
+            <h6>Diagnosis History</h6><p class="small mb-3">No major surgeries. No chronic conditions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATIENT 4 -->
+    <div class="card dash-card patient-row p-3 mb-3" data-search="k. juhoon kim juhoon pt-0007">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+          <strong class="dash-heading">K. Juhoon</strong>
+          <span class="patient-id">· Patient ID: PT-0007</span>
+          <div class="dash-subtext small">K.Juhoon@email.com · (04) 777 2468</div>
+        </div>
+        <div class="mt-2 mt-md-0">
+          <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#rec-juhoon">View Details</button>
+        </div>
+      </div>
+      <div class="collapse patient-detail p-3 mt-3" id="rec-juhoon">
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Name</h6><p class="small mb-3">Kim Juhoon</p>
+            <h6>Age</h6><p class="small mb-3">19 years</p>
+            <h6>DOB</h6><p class="small mb-3">14 Jan 2007</p>
+            <h6>Gender</h6><p class="small mb-3">Female</p>
+            <h6>Medical History</h6><p class="small mb-3">Mild asthma diagnosed – 07 May.</p>
+          </div>
+          <div class="col-md-6">
+            <h6>Last Visit</h6><p class="small mb-3">07 May</p>
+            <h6>Next Visit</h6><p class="small mb-3">02 Oct</p>
+            <h6>Allergies</h6><p class="small mb-3">Pollen</p>
+            <h6>Diagnosis History</h6><p class="small mb-3">Asthma since childhood. No surgeries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="dash-subtext small text-center mt-3" id="noResults" style="display:none;">No patients match your search.</p>
 
 </section>
 <!-- This is the end of the first-block -->
 
-<!-- This is the start of the second-block -->
-<section class = "second-block">
-  
-</section>
-<!-- This is the end of the second-block -->
-
-<!-- This is the start of the third-block -->
-<section class = "third-block">
-  
-</section>
-<!-- This is the end of the third-block -->
 
 <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!-- start of footer -->
-
- <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted footer">
-
-  <!-- Section: Links  -->
   <section class="">
     <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
       <div class="row mt-3">
-        <!-- Grid column -->
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
           <h6 class="fw-bold mb-4">
           <a class="fas fa-gem me-3 norwester footer-text2" href="index.html"><img class="logo" src="../images/logoo.png" alt="SmartClinic+ Logo" title="SmartClinic+ logo">SmartClinic+</a>
           </h6>
-          <p class="footer-text1 ralewaybold">
-            Intelligent Healthcare Management System
-          </p>
+          <p class="footer-text1 ralewaybold">Intelligent Healthcare Management System</p>
         </div>
-        <!-- Grid column -->
-
-
-        <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">
-            Quick links
-          </h6>
-          <p>
-            <a href="index.html" class="footer-links ralewaybold">Home</a>
-          </p>
-          <p>
-            <a href="patients.html" class="footer-links ralewaybold">Booking</a>
-          </p>
-          <p>
-            <a href="patients.html" class="footer-links ralewaybold">Patients</a>
-          </p>
+          <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">Quick links</h6>
+          <p><a href="index.html" class="footer-links ralewaybold">Home</a></p>
+          <p><a href="patients.html" class="footer-links ralewaybold">Booking</a></p>
+          <p><a href="patients.html" class="footer-links ralewaybold">Patients</a></p>
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
           <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">OTHERS</h6>
-          <p>
-            <a href="#" class="footer-links ralewaybold">About</a>
-          </p>
-          <p>
-            <a href="#" class="footer-links ralewaybold">Contact</a>
-          </p>
-          <p>
-            <a href="#" class="footer-links ralewaybold">Privacy Policy and Terms</a>
-          </p>
+          <p><a href="#" class="footer-links ralewaybold">About</a></p>
+          <p><a href="#" class="footer-links ralewaybold">Contact</a></p>
+          <p><a href="#" class="footer-links ralewaybold">Privacy Policy and Terms</a></p>
         </div>
-        <!-- Grid column -->
       </div>
-      <!-- Grid row -->
     </div>
   </section>
-  <!-- Section: Links  -->
-
-  <!-- Copyright -->
   <div class="text-center p-4">
-    <p class ="ralewaybold footer-text2">&copy; SmartClinic+. All rights reserved.</p>
+    <p class="ralewaybold footer-text2">&copy; SmartClinic+. All rights reserved.</p>
   </div>
-  <!-- Copyright -->
 </footer>
-<!-- Footer -->
 <!-- end of footer -->
 
-  </body>
+<script>
+ 
+
+  function filterRecords() {
+    var q = document.getElementById('recordSearch').value.toLowerCase();
+    var rows = document.querySelectorAll('#recordsList .patient-row');
+    var visibleCount = 0;
+    rows.forEach(function (row) {
+      var match = row.getAttribute('data-search').indexOf(q) !== -1;
+      row.style.display = match ? '' : 'none';
+      if (match) visibleCount++;
+    });
+    document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+</script>
+
+</body>
 </html>
