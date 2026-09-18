@@ -27,13 +27,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ralewayextrabold nav-text">
-      <a class="nav-item nav-link nav-text1 active" href="index.html">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link nav-text2" href="dashboard.html">Dashboard</a>
-      <a class="nav-item nav-link nav-text1" href="appointments.html">Appointments</a>
-      <a class="nav-item nav-link nav-text2" href="records.html">Records</a>
-      <a class="nav-item nav-link nav-text1" href="prescriptions.html">Prescriptions</a> -->
+ 
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ralewayextrabold nav-text">
@@ -67,10 +61,10 @@
     <!-- Sidebar (vertical pills) -->
     <div class="col-3">
       <div class="nav flex-column nav-pills" id="dashboard-tab" role="tablist">
-        <a class="nav-link active" id="overview-tab" data-toggle="pill" href="#overview" role="tab">🏠 Overview</a>
-        <a class="nav-link" id="schedule-tab" data-toggle="pill" href="#schedule" role="tab">📅 Schedule</a>
-        <a class="nav-link" id="patients-tab" data-toggle="pill" href="#patients" role="tab">👥 My Patients</a>
-        <a class="nav-link" id="doctors-tab" data-toggle="pill" href="#doctors" role="tab">👨‍⚕️ Doctors</a>
+        <a class="nav-link active" id="overview-tab" data-toggle="pill" href="#overview" role="tab">Overview</a>
+        <a class="nav-link" id="schedule-tab" data-toggle="pill" href="#schedule" role="tab">Schedule</a>
+        <a class="nav-link" id="patients-tab" data-toggle="pill" href="#patients" role="tab">My Patients</a>
+        <a class="nav-link" id="doctors-tab" data-toggle="pill" href="#doctors" role="tab"> Doctors</a>
       </div>
     </div>
   
@@ -84,34 +78,27 @@
           <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
             <div>
               <h5 class="dash-heading mb-0 ralewayextrabold">Welcome back, Dr. Bennett</h5>
-              <small class="dash-subtext">Tuesday, 22 September 2026</small>
+              <small class="dash-subtext">Wednesday, 30 September 2026</small>
             </div>
-            <span class="badge badge-live px-3 py-2 mt-2 mt-md-0">● Live</span>
-          </div>
+            </div>
 
           <div class="row mb-2">
             <div class="col-6 col-md-3 mb-3">
               <div class="card stat-card p-3">
                 <span class="stat-label">Today's appointments</span>
-                <h3 class="stat-value mb-0" id="stat-total">12</h3>
+                <h3 class="stat-value mb-0" id="stat-total">6</h3>
               </div>
             </div>
             <div class="col-6 col-md-3 mb-3">
               <div class="card stat-card accent-green p-3">
-                <span class="stat-label">Patients waiting</span>
-                <h3 class="stat-value mb-0" id="stat-waiting">3</h3>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 mb-3">
-              <div class="card stat-card accent-navy p-3">
-                <span class="stat-label">Completed</span>
-                <h3 class="stat-value mb-0" id="stat-completed">7</h3>
+                <span class="stat-label">Average wait Time</span>
+                <h3 class="stat-value mb-0" id="stat-waiting">14mins</h3>
               </div>
             </div>
             <div class="col-6 col-md-3 mb-3">
               <div class="card stat-card p-3">
-                <span class="stat-label">Pending reports</span>
-                <h3 class="stat-value mb-0" id="stat-reports">4</h3>
+                <span class="stat-label">Currently in Queue</span>
+                <h3 class="stat-value mb-0" id="stat-reports">2</h3>
               </div>
             </div>
           </div>
@@ -122,53 +109,35 @@
                 <h6 class="mb-3">Quick Patient Queue</h6>
                 <table class="table table-borderless mb-0 align-middle">
                   <thead>
-                    <tr class="dash-subtext"><th>Patient</th><th>Time</th><th>Status</th><th></th></tr>
+                    <tr class="dash-subtext"><th>Patient</th><th>Time</th><th>Status</th><th>Action</th></tr>
                   </thead>
                   <tbody>
                     <tr data-row="chen">
-                      <td>M. Chen</td>
-                      <td>9:00–9:30</td>
+                      <td>C. Dejucos</td>
+                      <td>9:30–10:00</td>
                       <td><span class="badge badge-inprogress">In progress</span></td>
                       <td class="text-right">
                         <button class="btn btn-sm btn-action-green" onclick="completeAppointment(this,'chen')">Complete</button>
                       </td>
                     </tr>
                     <tr data-row="osei">
-                      <td>A. Osei</td>
-                      <td>9:30–10:00</td>
+                      <td>M. Dhungana</td>
+                      <td>10:00–10:30</td>
                       <td><span class="badge badge-waiting">Waiting</span></td>
                       <td class="text-right">
                         <button class="btn btn-sm btn-action-blue" onclick="checkInAppointment(this,'osei')">Start</button>
                       </td>
                     </tr>
                     <tr data-row="ade">
-                      <td>K. Adeyemi</td>
-                      <td>10:00–10:30</td>
-                      <td><span class="badge badge-waiting">Waiting</span></td>
+                      <td>G. Manalo</td>
+                      <td>1:00–1:30</td>
+                      <td><span class="badge badge-waiting">Upcoming</span></td>
                       <td class="text-right">
                         <button class="btn btn-sm btn-action-blue" onclick="checkInAppointment(this,'ade')">Start</button>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-              </div>
-            </div>
-
-            <div class="col-lg-5 mb-3">
-              <div class="card dash-card p-3 h-100">
-                <h6 class="mb-3">Recent Notifications</h6>
-                <div class="notification-item mb-3">
-                  <small class="dash-subtext d-block">2 min ago</small>
-                  A. Osei checked in for their 9:30 appointment.
-                </div>
-                <div class="notification-item mb-3">
-                  <small class="dash-subtext d-block">18 min ago</small>
-                  Lab results are ready for M. Chen.
-                </div>
-                <div class="notification-item mb-0">
-                  <small class="dash-subtext d-block">1 hour ago</small>
-                  K. Adeyemi was added to today's schedule.
-                </div>
               </div>
             </div>
           </div>
@@ -178,27 +147,35 @@
         <div class="tab-pane fade" id="schedule" role="tabpanel">
           <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
             <h5 class="dash-heading mb-0 ralewayextrabold">My Schedule</h5>
-            <small class="dash-subtext">Tuesday, 22 September 2026</small>
+            <small class="dash-subtext">Wednesday, 30 September 2026</small>
           </div>
 
           <div class="card dash-card p-3 mb-4">
             <h6 class="mb-3">Today's Appointments</h6>
             <table class="table align-middle">
               <thead>
-                <tr class="dash-subtext"><th>Patient</th><th>Time</th><th>Status</th><th>Actions</th></tr>
+                <tr class="dash-subtext"><th>Patient</th><th>Time</th><th>Status</th><th>Actions</th> <th>View</th></tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>M. Chen</td>
+                  <td class="text-muted">Open slot</td>
+                  <td class="text-muted">9:00–9:30</td>
+                  <td><span class="badge badge-cancelled">Open</span></td>
+                  <td class="text-muted">—</td>
+                  <td class="text-muted">—</td>
+                </tr>
+                <tr>
+                  <td>C. Dejucos</td>
                   <td>9:00–9:30</td>
                   <td><span class="badge appt-status badge-inprogress">In Progress</span></td>
                   <td>
                     <button class="btn btn-sm btn-action-green mr-1" onclick="setStatus(this,'Completed')">Complete</button>
                     <button class="btn btn-sm btn-outline-secondary" onclick="setStatus(this,'Cancelled')">Cancel</button>
                   </td>
+                  <td class="text-muted">—</td>
                 </tr>
                 <tr>
-                  <td>A. Osei</td>
+                  <td>M. Dhungana</td>
                   <td>9:30–10:00</td>
                   <td><span class="badge appt-status badge-waiting">Waiting</span></td>
                   <td>
@@ -206,9 +183,11 @@
                     <button class="btn btn-sm btn-action-muted mr-1" onclick="reschedule(this)">Reschedule</button>
                     <button class="btn btn-sm btn-outline-secondary" onclick="setStatus(this,'Cancelled')">Cancel</button>
                   </td>
+                  <td class="text-muted"><button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-dhungana">View Details</button></td>
                 </tr>
+                
                 <tr>
-                  <td>K. Adeyemi</td>
+                  <td>G. Manalo</td>
                   <td>10:00–10:30</td>
                   <td><span class="badge appt-status badge-waiting">Waiting</span></td>
                   <td>
@@ -216,6 +195,7 @@
                     <button class="btn btn-sm btn-action-muted mr-1" onclick="reschedule(this)">Reschedule</button>
                     <button class="btn btn-sm btn-outline-secondary" onclick="setStatus(this,'Cancelled')">Cancel</button>
                   </td>
+                  <td class="text-muted">—</td>
                 </tr>
                 <tr>
                   <td class="text-muted">Open slot</td>
@@ -223,92 +203,206 @@
                   <td><span class="badge badge-cancelled">Open</span></td>
                   <td class="text-muted">—</td>
                 </tr>
+                <td class="text-muted">—</td>
               </tbody>
             </table>
           </div>
 
-          <div class="card dash-card p-3">
-            <h6 class="mb-3">Upcoming Appointments</h6>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                <span>6 Oct — A. Osei, Follow-up</span>
-                <span class="badge badge-waiting">Waiting</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                <span>9 Oct — M. Chen, Review results</span>
-                <span class="badge badge-waiting">Waiting</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+            </div>
 
         <!-- MY PATIENTS -->
         <div class="tab-pane fade" id="patients" role="tabpanel">
           <h5 class="dash-heading ralewayextrabold mb-3">My Patients <small class="dash-subtext">18 total</small></h5>
-
+   <!-- PATIENT 1 -->
           <div class="card dash-card patient-row p-3 mb-3">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
               <div>
-                <strong class="dash-heading">M. Chen</strong>
-                <span class="patient-id">· ID #P-1042 · 34 yrs</span>
-                <div class="dash-subtext small">m.chen@email.com · (04) 123 4567</div>
+                <strong class="dash-heading">C.Dejucos</strong>
+                <span class="patient-id">· Patient ID:PT-0001</span>
+                <div class="dash-subtext small">C.Dejucos@email.com · (04) 123 4567</div>
               </div>
               <div class="mt-2 mt-md-0">
                 <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-chen">View Details</button>
-                <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('M. Chen')">Add Note</button>
+                <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('C.Dejucos')">Add Note</button>
               </div>
             </div>
             <div class="collapse patient-detail p-3 mt-3" id="detail-chen">
               <div class="row">
                 <div class="col-md-6">
+                  <h6>Age</h6>
+                  <p class="small mb-3">20 years</p>
+                    
+                  <h6>DOB</h6>
+                  <p class="small mb-3">24 Nov 2000</p>
+                  <h6>Gender</h6>
+                  <p class="small mb-3">Female</p>
                   <h6>Medical History</h6>
-                  <p class="small mb-3">Hypertension (diagnosed 2021), seasonal allergies. No known drug allergies.</p>
-                  <h6>Current Medications</h6>
-                  <p class="small mb-3">Lisinopril 10mg — once daily</p>
+                  <p class="small mb-3">Mild hypertension - 14 Jan 2026 allergies.</p>
                 </div>
                 <div class="col-md-6">
-                  <h6>Previous Appointments</h6>
-                  <p class="small mb-3">14 Aug 2026 — General checkup<br>2 Jun 2026 — Blood pressure review</p>
-                  <h6>Test Results</h6>
-                  <p class="small mb-3">Blood panel (18 Sep 2026): within normal range</p>
+                  <h6>Last Visit</h6>
+                  <p class="small mb-3">14 jan </p>
+                  <h6>Next Visit</h6>
+                  <p class="small mb-3">30 Sep </p>
+                  <h6>Allergies</h6>
+                  <p class="small mb-3">Peanuts, Penicillin </p>
+                  <h6>Diagnosis History</h6>
+                  <p class="small mb-3">No major surgeries. Family History of hypertension.</p>
                 </div>
               </div>
-              <h6>Diagnosis &amp; Prescriptions</h6>
-              <p class="small mb-0">Mild, well-managed hypertension. Continue current prescription and review again in 3 months.</p>
             </div>
-          </div>
+            </div>
 
+ <!-- PATIENT 2 -->
           <div class="card dash-card patient-row p-3 mb-3">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
               <div>
-                <strong class="dash-heading">A. Osei</strong>
-                <span class="patient-id">· ID #P-1077 · 41 yrs</span>
-                <div class="dash-subtext small">a.osei@email.com · (04) 987 6543</div>
+                <strong class="dash-heading">G. Manalo</strong>
+                <span class="patient-id">· Patient ID: PT-0005</span>
+                <div class="dash-subtext small">G. Manalo@email.com · (04) 987 6543</div>
               </div>
               <div class="mt-2 mt-md-0">
                 <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-osei">View Details</button>
-                <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('A. Osei')">Add Note</button>
+                <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('G. Manalo')">Add Note</button>
               </div>
             </div>
             <div class="collapse patient-detail p-3 mt-3" id="detail-osei">
               <div class="row">
                 <div class="col-md-6">
+                  <h6>Age</h6>
+                  <p class="small mb-3">25 years</p>
+                  <h6>DOB</h6>
+                  <p class="small mb-3">24 Nov 2000</p>
+                  <h6>Gender</h6>
+                  <p class="small mb-3">Female</p>
                   <h6>Medical History</h6>
-                  <p class="small mb-3">Type 2 diabetes (diagnosed 2019). Penicillin allergy.</p>
-                  <h6>Current Medications</h6>
-                  <p class="small mb-3">Metformin 500mg — twice daily</p>
+                  <p class="small mb-3">Migraine - 15 Sep.</p>
                 </div>
                 <div class="col-md-6">
-                  <h6>Previous Appointments</h6>
-                  <p class="small mb-3">22 Sep 2026 — Follow-up<br>10 Jul 2026 — General checkup</p>
-                  <h6>Test Results</h6>
-                  <p class="small mb-3">HbA1c (20 Sep 2026): 6.8% — improving</p>
+                  <h6>Last Visit</h6>
+                  <p class="small mb-3">15 Sep </p>
+                  <h6>Next Visit</h6>
+                  <p class="small mb-3">30 Sep </p>
+                <h6>Allergies</h6>
+                  <p class="small mb-3">None Recorded </p>
+                  <h6>Diagnosis History</h6>
+                  <p class="small mb-3">No major surgeries. No chronic conditions. </p>
                 </div>
               </div>
-              <h6>Diagnosis &amp; Prescriptions</h6>
-              <p class="small mb-0">Type 2 diabetes, responding well to treatment. Follow-up scheduled for 6 Oct.</p>
-            </div>
+              </div>
           </div>
+           <!-- PATIENT 3 -->
+        <div class="card dash-card patient-row p-3 mb-3">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+              <div>
+                <strong class="dash-heading">M. Dhungana</strong>
+                <span class="patient-id">· Patient ID:PT-0003</span>
+                <div class="dash-subtext small">M. Dhungana@email.com · (04) 123 4567</div>
+              </div>
+              <div class="mt-2 mt-md-0">
+                <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-dhungana">View Details</button>
+                <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('M. Dhungana')">Add Note</button>
+              </div>
+            </div>
+
+            <div class="collapse patient-detail p-3 mt-3" id="detail-dhungana">
+        <div class="row">
+
+      <div class="col-md-6">
+        <h6>Name</h6>
+        <p class="small mb-3">Madhav Dhungana</p>
+        <h6>Age</h6>
+        <p class="small mb-3">21 years</p>
+
+        <h6>DOB</h6>
+        <p class="small mb-3">10 May 2005</p>
+
+        <h6>Gender</h6>
+        <p class="small mb-3">Male</p>
+
+        <h6>Medical History</h6>
+        <p class="small mb-3">Sprained ankle - 04 March 2026.</p>
+      </div>
+
+      <div class="col-md-6">
+        <h6>Last Visit</h6>
+        <p class="small mb-3">04 March</p>
+
+        <h6>Next Visit</h6>
+        <p class="small mb-3">30 Sep</p>
+        <h6>Allergies</h6>
+        <p class="small mb-3">Shellfish</p>
+
+        <h6>Diagnosis History</h6>
+        <p class="small mb-3">No major surgeries. No chronic conditions.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- PATIENT 4 -->
+<div class="card dash-card patient-row p-3 mb-3">
+  <div class="d-flex justify-content-between align-items-center flex-wrap">
+    <div>
+      <strong class="dash-heading">K. Juhoon</strong>
+      <span class="patient-id">· Patient ID: PT-0007</span>
+      <div class="dash-subtext small">K. Juhoon@email.com · (04) 777 2468</div>
+    </div>
+
+    <div class="mt-2 mt-md-0">
+      <button class="btn btn-sm btn-action-blue mr-1"
+              data-toggle="collapse"
+              data-target="#detail-juhoon">
+        View Details
+      </button>
+
+      <button class="btn btn-sm btn-action-green"
+              data-toggle="modal"
+              data-target="#noteModal"
+              onclick="setNotePatient('K. Juhoon')">
+        Add Note
+      </button>
+    </div>
+  </div>
+
+  <div class="collapse patient-detail p-3 mt-3" id="detail-juhoon">
+    <div class="row">
+
+      <div class="col-md-6">
+        <h6>Name </h6>
+        <p class="small mb-3">Kim Juhoon</p>
+        <h6>Age</h6>
+        <p class="small mb-3">19 years</p>
+
+        <h6>DOB</h6>
+        <p class="small mb-3">14 jan 2007</p>
+
+        <h6>Gender</h6>
+        <p class="small mb-3">Female</p>
+
+        <h6>Medical History</h6>
+        <p class="small mb-3">Mild asthma diagnosed - 07 May.</p>
+      </div>
+
+      <div class="col-md-6">
+        <h6>Last Visit</h6>
+        <p class="small mb-3">07 May</p>
+
+        <h6>Next Visit</h6>
+        <p class="small mb-3">02 Oct</p>
+        <h6>Allergies</h6>
+        <p class="small mb-3">Pollen</p>
+
+
+        <h6>Diagnosis History</h6>
+        <p class="small mb-3">Asthma since childhood. No surgeries.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
         </div>
 
         <!-- DOCTORS -->
@@ -318,11 +412,12 @@
           <div class="card doctor-card you-card p-3 mb-4">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
               <div class="d-flex align-items-center">
-                <div class="doctor-avatar mr-3">SB</div>
+                <div class="doctor-avatar mr-3">CN</div>
                 <div>
-                  <strong class="dash-heading">Dr. S. Bennett <span class="dash-subtext font-weight-normal">(you)</span></strong>
-                  <div class="dash-subtext small">General Medicine · Room 4</div>
+                  <strong class="dash-heading">Dr. Chauncey Nieto </strong>
+                  <div class="dash-subtext small">Specialization: General Practitioner</div>
                 </div>
+                
               </div>
               <div class="d-flex align-items-center mt-2 mt-md-0">
                 <select class="form-control form-control-sm mr-2" style="width:auto;" id="myAvailability" onchange="updateAvailability(this)">
@@ -330,61 +425,34 @@
                   <option value="busy">Busy</option>
                   <option value="offline">Offline</option>
                 </select>
-                <span class="badge badge-available" id="myAvailabilityBadge">Available</span>
-              </div>
+                  </div>
             </div>
             <div class="dash-subtext small mt-2" id="myWorkingHours">Working hours: 9:00am – 5:00pm</div>
-          </div>
+              </div>
+          
 
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <div class="card doctor-card p-3">
-                <div class="d-flex justify-content-between align-items-start">
-                  <div class="d-flex align-items-center">
-                    <div class="doctor-avatar mr-3">EO</div>
+          <div class="card doctor-card you-card p-3 mb-4">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+              <div class="d-flex align-items-center">
+                    <div class="doctor-avatar mr-3">YC</div>
                     <div>
-                      <strong class="dash-heading">Dr. E. Osei</strong>
-                      <div class="dash-subtext small">Paediatrics · Room 2</div>
+                      <strong class="dash-heading">Dr. Yufan Chao</strong>
+                      <div class="dash-subtext small">Specialization: Psychiatrist</div>
                     </div>
                   </div>
-                  <span class="badge badge-busy">Busy</span>
+                  <div class="d-flex align-items-center mt-2 mt-md-0">
+                <select class="form-control form-control-sm mr-2" style="width:auto;" id="myAvailability" onchange="updateAvailability(this)">
+                  <option value="available">Available</option>
+                  <option value="busy">Busy</option>
+                  <option value="offline">Offline</option>
+                </select>
+                  </div>
                 </div>
                 <div class="dash-subtext small mt-2">Working hours: 8:00am – 4:00pm</div>
               </div>
             </div>
 
-            <div class="col-md-6 mb-3">
-              <div class="card doctor-card p-3">
-                <div class="d-flex justify-content-between align-items-start">
-                  <div class="d-flex align-items-center">
-                    <div class="doctor-avatar mr-3">RA</div>
-                    <div>
-                      <strong class="dash-heading">Dr. R. Ali</strong>
-                      <div class="dash-subtext small">Cardiology · Room 6</div>
-                    </div>
-                  </div>
-                  <span class="badge badge-offline">Offline</span>
-                </div>
-                <div class="dash-subtext small mt-2">Working hours: 10:00am – 6:00pm</div>
               </div>
-            </div>
-
-            <div class="col-md-6 mb-3">
-              <div class="card doctor-card p-3">
-                <div class="d-flex justify-content-between align-items-start">
-                  <div class="d-flex align-items-center">
-                    <div class="doctor-avatar mr-3">LM</div>
-                    <div>
-                      <strong class="dash-heading">Dr. L. Mensah</strong>
-                      <div class="dash-subtext small">Dermatology · Room 1</div>
-                    </div>
-                  </div>
-                  <span class="badge badge-available">Available</span>
-                </div>
-                <div class="dash-subtext small mt-2">Working hours: 9:00am – 3:00pm</div>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
