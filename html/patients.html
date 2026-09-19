@@ -1,160 +1,376 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- local css -->
-      <link rel="stylesheet" href="../styles/styles.css">
-    <!-- end of local csss -->
+    <link rel="stylesheet" href="../styles/styles.css">
 
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 
     <title>SmartClinic+ | Patients</title>
     <link rel="icon" type="image/x-icon" href="../images/logoo.png">
-
   </head>
 
 <body>
 
 <!-- This is the start of the nav bar -->
- 
+
 <!-- THIS IS THE START OF THE NAV BAR (MENU SECTION) -->
+
 <nav class="navbar navbar-expand-lg navbar-light first-block">
-  <a class="norwester nav-name" href="index.html"><img class="logo" src="../images/logoo.png" alt="SmartClinic+ Logo" title="SmartClinic+ logo">SmartClinic+</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="norwester nav-name" href="index.html">
+    <img class="logo" src="../images/logoo.png" alt="SmartClinic+ Logo">SmartClinic+
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ralewayextrabold nav-text">
-      <a class="nav-item nav-link nav-text1 active" href="index.html">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link nav-text2" href="dashboard.html">Dashboard</a>
-      <a class="nav-item nav-link nav-text1" href="appointments.html">Appointments</a>
-      <a class="nav-item nav-link nav-text2" href="records.html">Records</a>
-      <a class="nav-item nav-link nav-text1" href="prescriptions.html">Prescriptions</a> -->
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ralewayextrabold nav-text">
-          <li class="nav-item active">
-            <a class="nav-item nav-link nav-text1 active" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item nav-link nav-text2" href="patients.html">For Patients</a>
-          </li>
-          <li class="nav-item dropdown nav-text1">
-            <a class="nav-link dropdown-toggle nav-text1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              For Staff
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item nav-text2" href="doctorsdashboard.html">Doctor Dashboard</a>
-              <a class="dropdown-item nav-text2" href="tasks.html">Tasks</a>
-              <a class="dropdown-item nav-text2" href="patientrecords.html">Patient Records</a>
-            </div>
-          </li>
-        </ul>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ralewayextrabold nav-text">
+      <li class="nav-item active">
+        <a class="nav-item nav-link nav-text1 active" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link nav-text2" href="patients.html">For Patients</a>
+      </li>
+      <li class="nav-item dropdown nav-text1">
+        <a class="nav-link dropdown-toggle nav-text1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+          For Staff
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item nav-text2" href="doctorsdashboard.html">Doctor Dashboard</a>
+          <a class="dropdown-item nav-text2" href="tasks.html">Tasks</a>
+          <a class="dropdown-item nav-text2" href="patientrecords.html">Patient Records</a>
         </div>
-    <!-- </div>
-  </div> -->
+      </li>
+    </ul>
+  </div>
 </nav>
+
 <!-- THIS IS THE END OF THE NAV BAR (MENU SECTION) -->
 
+<!--================ EDITS G.MANALO ================-->
 
-<!-- This is the start of the first-block -->
-<section class = "first-block">
+<!--  BANNER SECTION -->
+<section class="first-block p-0">
+
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+
+      <div class="col-md-4">
+        <div class="patient-banner">
+          <img src="../images/clinic2.jpg" class="banner-img" alt="Clinic Image 1">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="patient-banner">
+          <img src="../images/clinic1.jpg" class="banner-img" alt="Clinic Image 2">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="patient-banner">
+          <img src="../images/clinic3.jpg" class="banner-img" alt="Clinic Image 3">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Banner Text Overlay -->
+    <div class="banner-text text-center">
+      <h1 class="norwester">PATIENTS DASHBOARD</h1>
+      <p class="ralewaybold">Check Your Details and Book Appointment</p>
+    </div>
+  </div>
+
+  <!-- Book Now Button -->
+  <div class="text-center mt-4">
+  <a href="#" class="btn-action-green" data-toggle="modal" data-target="#bookingModal">
+  Book Now
+</a>
+
+</div>
 
 </section>
-<!-- This is the end of the first-block -->
 
-<!-- This is the start of the second-block -->
-<section class = "second-block">
-  
-</section>
-<!-- This is the end of the second-block -->
 
-<!-- This is the start of the third-block -->
-<section class = "third-block">
-  
+
+
+
+<!-- FEATURE BOXES -->
+<section class="second-block">
+
+  <div class="container mt-4">
+    <div class="row">
+
+      <!-- Book Now Box -->
+      <div class="col-md-4 mb-4">
+  <div class="card dash-card h-100 text-center p-3"
+       data-toggle="modal" data-target="#bookingModal"
+       style="cursor: pointer;">
+    <img src="../images/booking.jpg" class="img-fluid mb-3" alt="Book Now">
+    <h5 class="ralewaybold">Book Now</h5>
+  </div>
+</div>
+
+
+      <!-- View Records Box -->
+      <div class="col-md-4 mb-4">
+        <div class="card dash-card h-100 text-center p-3">
+          <img src="../images/viewrecords.jpg" class="img-fluid mb-3" alt="View Records">
+          <h5 class="ralewaybold">View Records</h5>
+        </div>
+      </div>
+
+      <!-- Check Availability Box -->
+      <div class="col-md-4 mb-4">
+        <div class="card dash-card h-100 text-center p-3">
+          <img src="../images/availability.jpg" class="img-fluid mb-3" alt="Check Availability">
+          <h5 class="ralewaybold">Check Availability</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </section>
-<!-- This is the end of the third-block -->
+
+
+<!-- THIRD BLOCK ============to be edited=============-->
+<section class="third-block"></section>
+
+<!---============ pitstop G.MANALO edits=====================-->
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
-<!-- start of footer -->
 
- <!-- Footer -->
+<!--  FOOTER -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted footer">
 
-  <!-- Section: Links  -->
   <section class="">
     <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
+
       <div class="row mt-3">
-        <!-- Grid column -->
+
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
           <h6 class="fw-bold mb-4">
-          <a class="fas fa-gem me-3 norwester footer-text2" href="index.html"><img class="logo" src="../images/logoo.png" alt="SmartClinic+ Logo" title="SmartClinic+ logo">SmartClinic+</a>
+            <a class="norwester footer-text2" href="index.html">
+              <img class="logo" src="../images/logoo.png" alt="SmartClinic+ Logo">SmartClinic+
+            </a>
           </h6>
-          <p class="footer-text1 ralewaybold">
-            Intelligent Healthcare Management System
-          </p>
+          <p class="footer-text1 ralewaybold">Intelligent Healthcare Management System</p>
         </div>
-        <!-- Grid column -->
 
-
-        <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">
-            Quick links
-          </h6>
-          <p>
-            <a href="index.html" class="footer-links ralewaybold">Home</a>
-          </p>
-          <p>
-            <a href="patients.html" class="footer-links ralewaybold">Booking</a>
-          </p>
-          <p>
-            <a href="patients.html" class="footer-links ralewaybold">Patients</a>
-          </p>
+          <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">Quick links</h6>
+          <p><a href="index.html" class="footer-links ralewaybold">Home</a></p>
+          <p><a href="patients.html" class="footer-links ralewaybold">Booking</a></p>
+          <p><a href="patients.html" class="footer-links ralewaybold">Patients</a></p>
         </div>
-        <!-- Grid column -->
 
-        <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
           <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">OTHERS</h6>
-          <p>
-            <a href="#" class="footer-links ralewaybold">About</a>
-          </p>
-          <p>
-            <a href="#" class="footer-links ralewaybold">Contact</a>
-          </p>
-          <p>
-            <a href="#" class="footer-links ralewaybold">Privacy Policy and Terms</a>
-          </p>
+          <p><a href="#" class="footer-links ralewaybold">About</a></p>
+          <p><a href="#" class="footer-links ralewaybold">Contact</a></p>
+          <p><a href="#" class="footer-links ralewaybold">Privacy Policy and Terms</a></p>
         </div>
-        <!-- Grid column -->
+
       </div>
-      <!-- Grid row -->
     </div>
   </section>
-  <!-- Section: Links  -->
 
-  <!-- Copyright -->
   <div class="text-center p-4">
-    <p class ="ralewaybold footer-text2">&copy; SmartClinic+. All rights reserved.</p>
+    <p class="ralewaybold footer-text2">&copy; SmartClinic+. All rights reserved.</p>
   </div>
-  <!-- Copyright -->
+
 </footer>
 <!-- Footer -->
 <!-- end of footer -->
 
-  </body>
+
+<!---============  G.MANALO edits=====================-->
+<!-- ============================
+     Pop-ups!!!!!!!!!!!!!!!!!!!!
+     ============================ -->
+
+
+<!-- BOOKING POPUP -->
+<div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-3">
+
+      <div class="modal-header">
+        <h5 class="modal-title ralewaybold" id="bookingModalLabel">Book an Appointment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Select Doctor
+
+         PLEASE UPDATE LIST BASED ON DOCTORS LIST (Madhav)=====================-->
+
+        <div class="form-group">
+          <label class="ralewaybold">Select doctor</label>
+          <select class="form-control">
+            <option>Dr. Ismael Green</option>
+            <option>Dr. Amelia Reyes</option>
+            <option>Dr. Marcus Tan</option>
+          </select>
+        </div>
+
+        <!-- Select Date -->
+        <div class="form-group">
+          <label class="ralewaybold">Select date</label>
+          <input type="date" class="form-control">
+        </div>
+
+        <!-- Time Slots -->
+        <label class="ralewaybold">Available time slots</label>
+        <div class="d-flex flex-wrap mt-2">
+
+          <button class="btn btn-outline-secondary m-1 time-slot">9:00–9:30</button>
+          <button class="btn btn-outline-secondary m-1 time-slot">9:30–10:00</button>
+          <button class="btn btn-outline-secondary m-1 time-slot">10:00–10:30</button>
+
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-action-green px-4">Confirm Booking</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- BOOKING COMPLETED POPUP -->
+<div class="modal fade" id="bookingCompleteModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-3">
+
+      <div class="modal-header">
+        <h5 class="modal-title ralewaybold">Booking Completed!</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <p class="ralewaybold mb-2">
+          Queue for <span id="confirmDoctor"></span>
+        </p>
+
+        <p class="mb-3">
+          <span id="confirmDate"></span>
+        </p>
+
+        <ul class="list-group">
+          <li class="list-group-item">Open Slot — 9:00 to 9:30</li>
+          <li class="list-group-item font-weight-bold text-success">
+            You — <span id="confirmTime"></span>
+          </li>
+          <li class="list-group-item">G. Manalo — 10:00 to 10:30</li>
+        </ul>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-action-green px-4">
+          Want to reschedule or cancel?
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--  Additional scripts for pop-ups -->
+
+
+<!-- f script for pop-up booking-->
+
+ <script>
+  // Highlight selected time slot
+  document.querySelectorAll('.time-slot').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.time-slot').forEach(b => b.classList.remove('active-slot'));
+      btn.classList.add('active-slot');
+    });
+  });
+</script>
+
+<!-- confirm booking-->
+ <script>
+  // Confirm Booking button logic
+  document.querySelector('.btn-action-green.px-4').addEventListener('click', function () {
+
+    const doctor = document.querySelector('.modal-body select').value;
+    const date = document.querySelector('.modal-body input[type="date"]').value;
+    const selectedSlot = document.querySelector('.active-slot')
+                         ? document.querySelector('.active-slot').innerText
+                         : null;
+
+    // VALIDATION — prevent confirmation if missing fields
+    if (!doctor) {
+      alert("Please select a doctor.");
+      return;
+    }
+
+    if (!date) {
+      alert("Please select a date.");
+      return;
+    }
+
+    if (!selectedSlot) {
+      alert("Please select a time slot.");
+      return;
+    }
+
+    // confirmation modal
+    document.getElementById('confirmDoctor').innerText = doctor;
+    document.getElementById('confirmDate').innerText = date;
+    document.getElementById('confirmTime').innerText = selectedSlot;
+
+    // Close booking modal
+    $('#bookingModal').modal('hide');
+
+    // Open confirmation modal
+    $('#bookingCompleteModal').modal('show');
+  });
+</script>
+
+
+
+
+<!-- want to reschedule or cancel?-->
+
+<script>
+  // Return to booking modal
+  document.querySelector('#bookingCompleteModal .btn-action-green').addEventListener('click', function () {
+    $('#bookingCompleteModal').modal('hide');
+    $('#bookingModal').modal('show');
+  });
+</script>
+
+<!-------Pitstop G.MANALO Edits------------->
+
+</body>
 </html>
