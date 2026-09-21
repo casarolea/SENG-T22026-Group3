@@ -1,3 +1,5 @@
+/* ==== FONTS start ==== */
+
 @font-face {
     font-family:'RalewayEB';
     src: url(../fonts/raleway-extrabold.ttf);
@@ -32,11 +34,19 @@
     font-family: 'RalewayB';
 }
 
+/* ==== FONTS end ==== */
+
+/* ==== LOGO start ==== */
+
 .logo {
     width: 80px;
     height: auto;
     margin-right: 8px;
 }
+
+/* ==== LOGO end ==== */
+
+/* ==== NAVBAR start */
 
 .nav-name {
     color: #6a99df !important;
@@ -62,6 +72,10 @@
     margin-right: 20px;
 }
 
+/* ==== NAVBAR end ==== */
+
+/* ==== CONTAINERS class start ==== */
+
 .first-block {
     background-color: #fcfffc;
     padding: 50px 5%;
@@ -76,6 +90,10 @@
     background-color: #cfdcdf;
     padding: 50px 5%;
 }
+
+/* ==== CONTAINERS class end ==== */
+
+/* ==== FOOTER start ==== */
 
 .footer {
     background-color: #2d384d;
@@ -100,218 +118,7 @@
     text-decoration: underline
 }
 
-/* ============================
-   Doctor Dashboard
-   ============================ */
-
-.dash-heading {
-    color: #2d384d;
-}
-
-.dash-subtext {
-    color: #2d384d;
-    opacity: 0.55;
-}
-
-/* Sidebar pills */
-#dashboard-tab .nav-link {
-    color: #2d384d;
-    font-family: 'RalewayB';
-    border-radius: 6px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
-}
-
-#dashboard-tab .nav-link:hover {
-    background-color: #e5efe7;
-}
-
-#dashboard-tab .nav-link.active {
-    background-color: #6a99df;
-    color: #fcfffc;
-}
-
-/* Live pill */
-.badge-live {
-    background-color: #a0d3ab;
-    color: #2d384d;
-    font-family: 'RalewayB';
-    font-weight: normal;
-}
-
-/* Stat cards */
-.stat-card {
-    border: none;
-    border-left: 4px solid #6a99df;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(45, 56, 77, 0.08);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(45, 56, 77, 0.12);
-}
-
-.stat-card.accent-green {
-    border-left-color: #a0d3ab;
-}
-
-.stat-card.accent-navy {
-    border-left-color: #2d384d;
-}
-
-.stat-label {
-    color: #2d384d;
-    opacity: 0.6;
-    font-size: 13px;
-    font-family: 'RalewayB';
-}
-
-.stat-value {
-    color: #2d384d;
-    font-family: 'Norwester';
-    letter-spacing: 0.5px;
-}
-
-/* General dashboard cards */
-.dash-card {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(45, 56, 77, 0.08);
-}
-
-.dash-card h6 {
-    color: #2d384d;
-    font-family: 'RalewayB';
-}
-
-/* Notifications */
-.notification-item {
-    border-left: 3px solid #a0d3ab;
-    padding-left: 12px;
-    color: #2d384d;
-    font-size: 14px;
-}
-
-/* Status badges (appointments) */
-.badge-waiting {
-    background-color: #6a99df;
-    color: #fcfffc;
-}
-
-.badge-inprogress {
-    background-color: #2d384d;
-    color: #fcfffc;
-}
-
-.badge-completed {
-    background-color: #a0d3ab;
-    color: #2d384d;
-}
-
-.badge-cancelled {
-    background-color: #cfdcdf;
-    color: #2d384d;
-}
-
-/* Availability badges (doctors) */
-.badge-available {
-    background-color: #a0d3ab;
-    color: #2d384d;
-}
-
-.badge-busy {
-    background-color: #6a99df;
-    color: #fcfffc;
-}
-
-.badge-offline {
-    background-color: #cfdcdf;
-    color: #2d384d;
-}
-
-/* Buttons */
-.btn-action-blue {
-    background-color: #6a99df;
-    color: #fcfffc;
-    border: none;
-}
-
-.btn-action-blue:hover {
-    background-color: #5786cf;
-    color: #fcfffc;
-}
-
-.btn-action-green {
-    background-color: #a0d3ab;
-    color: #2d384d;
-    border: none;
-}
-
-.btn-action-green:hover {
-    background-color: #8dc79a;
-    color: #2d384d;
-}
-
-.btn-action-muted {
-    background-color: #cfdcdf;
-    color: #2d384d;
-    border: none;
-}
-
-.btn-action-muted:hover {
-    background-color: #bccdd1;
-    color: #2d384d;
-}
-
-/* Patient detail panel */
-.patient-detail {
-    background-color: #fcfffc;
-    border-top: 1px solid #e5efe7;
-    border-radius: 0 0 8px 8px;
-}
-
-.patient-detail h6 {
-    color: #6a99df;
-    font-family: 'RalewayB';
-    font-size: 13px;
-    text-transform: none;
-}
-
-.patient-row {
-    border-radius: 8px;
-}
-
-.patient-row .patient-id {
-    color: #2d384d;
-    opacity: 0.55;
-}
-
-/* Doctors tab */
-.doctor-card {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(45, 56, 77, 0.08);
-    height: 100%;
-}
-
-.doctor-avatar {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
-    border-radius: 50%;
-    background-color: #e5efe7;
-    color: #6a99df;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'RalewayB';
-}
-
-.you-card {
-    border: 1px solid #a0d3ab;
-}
+/* ==== FOOTER end ==== */
 
 /* ============================
    Doctor Dashboard
@@ -526,7 +333,220 @@
     border: 1px solid #a0d3ab;
 }
 
-/* Cassandra - homepage */
+/* ============================
+   Doctor Dashboard
+   ============================ */
+
+.dash-heading {
+    color: #2d384d;
+}
+
+.dash-subtext {
+    color: #2d384d;
+    opacity: 0.55;
+}
+
+/* Sidebar pills */
+#dashboard-tab .nav-link {
+    color: #2d384d;
+    font-family: 'RalewayB';
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 6px;
+}
+
+#dashboard-tab .nav-link:hover {
+    background-color: #e5efe7;
+}
+
+#dashboard-tab .nav-link.active {
+    background-color: #6a99df;
+    color: #fcfffc;
+}
+
+/* Live pill */
+.badge-live {
+    background-color: #a0d3ab;
+    color: #2d384d;
+    font-family: 'RalewayB';
+    font-weight: normal;
+}
+
+/* Stat cards */
+.stat-card {
+    border: none;
+    border-left: 4px solid #6a99df;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(45, 56, 77, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(45, 56, 77, 0.12);
+}
+
+.stat-card.accent-green {
+    border-left-color: #a0d3ab;
+}
+
+.stat-card.accent-navy {
+    border-left-color: #2d384d;
+}
+
+.stat-label {
+    color: #2d384d;
+    opacity: 0.6;
+    font-size: 13px;
+    font-family: 'RalewayB';
+}
+
+.stat-value {
+    color: #2d384d;
+    font-family: 'Norwester';
+    letter-spacing: 0.5px;
+}
+
+/* General dashboard cards */
+.dash-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(45, 56, 77, 0.08);
+}
+
+.dash-card h6 {
+    color: #2d384d;
+    font-family: 'RalewayB';
+}
+
+/* Notifications */
+.notification-item {
+    border-left: 3px solid #a0d3ab;
+    padding-left: 12px;
+    color: #2d384d;
+    font-size: 14px;
+}
+
+/* Status badges (appointments) */
+.badge-waiting {
+    background-color: #6a99df;
+    color: #fcfffc;
+}
+
+.badge-inprogress {
+    background-color: #2d384d;
+    color: #fcfffc;
+}
+
+.badge-completed {
+    background-color: #a0d3ab;
+    color: #2d384d;
+}
+
+.badge-cancelled {
+    background-color: #cfdcdf;
+    color: #2d384d;
+}
+
+/* Availability badges (doctors) */
+.badge-available {
+    background-color: #a0d3ab;
+    color: #2d384d;
+}
+
+.badge-busy {
+    background-color: #6a99df;
+    color: #fcfffc;
+}
+
+.badge-offline {
+    background-color: #cfdcdf;
+    color: #2d384d;
+}
+
+/* Buttons */
+.btn-action-blue {
+    background-color: #6a99df;
+    color: #fcfffc;
+    border: none;
+}
+
+.btn-action-blue:hover {
+    background-color: #5786cf;
+    color: #fcfffc;
+}
+
+.btn-action-green {
+    background-color: #a0d3ab;
+    color: #2d384d;
+    border: none;
+}
+
+.btn-action-green:hover {
+    background-color: #8dc79a;
+    color: #2d384d;
+}
+
+.btn-action-muted {
+    background-color: #cfdcdf;
+    color: #2d384d;
+    border: none;
+}
+
+.btn-action-muted:hover {
+    background-color: #bccdd1;
+    color: #2d384d;
+}
+
+/* Patient detail panel */
+.patient-detail {
+    background-color: #fcfffc;
+    border-top: 1px solid #e5efe7;
+    border-radius: 0 0 8px 8px;
+}
+
+.patient-detail h6 {
+    color: #6a99df;
+    font-family: 'RalewayB';
+    font-size: 13px;
+    text-transform: none;
+}
+
+.patient-row {
+    border-radius: 8px;
+}
+
+.patient-row .patient-id {
+    color: #2d384d;
+    opacity: 0.55;
+}
+
+/* Doctors tab */
+.doctor-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(45, 56, 77, 0.08);
+    height: 100%;
+}
+
+.doctor-avatar {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    background-color: #e5efe7;
+    color: #6a99df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'RalewayB';
+}
+
+.you-card {
+    border: 1px solid #a0d3ab;
+}
+
+/* ==== HOMEPAGE start ==== */
 
 .carousel-item img {
     height: 700px;         
@@ -599,7 +619,7 @@
     cursor: pointer;
   }
 
-/* Cassandra - end homepage */
+/* ==== HOMEPAGE end ==== */
 
 /* Gaea---------------start of edits --------
 /* 
