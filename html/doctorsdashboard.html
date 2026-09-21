@@ -175,7 +175,7 @@
                     <button class="btn btn-sm btn-action-green mr-1" onclick="setStatus(this,'Completed')">Complete</button>
                     <button class="btn btn-sm btn-outline-secondary" onclick="setStatus(this,'Cancelled')">Cancel</button>
                   </td>
-                  <td class="text-muted">—</td>
+                  <td><button class="btn btn-sm btn-action-blue" data-toggle="collapse" data-target="#sched-detail-dejucos">View Details</button></td>
                 </tr>
                 <tr>
                   <td>M. Dhungana</td>
@@ -186,7 +186,7 @@
                     <button class="btn btn-sm btn-action-muted mr-1" onclick="reschedule(this)">Reschedule</button>
                     <button class="btn btn-sm btn-outline-secondary" onclick="setStatus(this,'Cancelled')">Cancel</button>
                   </td>
-                  <td class="text-muted"><button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-dhungana">View Details</button></td>
+                  <td><button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#sched-detail-dhungana">View Details</button></td>
                 </tr>
                 
                 <tr>
@@ -198,31 +198,77 @@
                     <button class="btn btn-sm btn-action-muted mr-1" onclick="reschedule(this)">Reschedule</button>
                     <button class="btn btn-sm btn-outline-secondary" onclick="setStatus(this,'Cancelled')">Cancel</button>
                   </td>
-                  <td class="text-muted">—</td>
+                  <td><button class="btn btn-sm btn-action-blue" data-toggle="collapse" data-target="#sched-detail-manalo">View Details</button></td>
                 </tr>
                 <tr>
                   <td class="text-muted">Open slot</td>
                   <td class="text-muted">10:30–11:00</td>
                   <td><span class="badge badge-cancelled">Open</span></td>
                   <td class="text-muted">—</td>
+                  <td class="text-muted">—</td>
                 </tr>
-                <td class="text-muted">—</td>
               </tbody>
             </table>
+
+            <div class="collapse patient-detail p-3 mt-3" id="sched-detail-dejucos">
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Age</h6>
+                  <p class="small mb-3">20 years</p>
+                  <h6>Gender</h6>
+                  <p class="small mb-3">Female</p>
+                  <h6>Medical History</h6>
+                  <p class="small mb-3">Mild hypertension - 14 Jan 2026.</p>
+                </div>
+                <div class="col-md-6">
+                  <h6>Allergies</h6>
+                  <p class="small mb-3">Peanuts, Penicillin</p>
+                  <h6>Reason for Visit</h6>
+                  <p class="small mb-3">Blood pressure follow-up.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse patient-detail p-3 mt-3" id="sched-detail-dhungana">
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Age</h6>
+                  <p class="small mb-3">21 years</p>
+                  <h6>Gender</h6>
+                  <p class="small mb-3">Male</p>
+                  <h6>Medical History</h6>
+                  <p class="small mb-3">Sprained ankle - 04 March 2026.</p>
+                </div>
+                <div class="col-md-6">
+                  <h6>Allergies</h6>
+                  <p class="small mb-3">Shellfish</p>
+                  <h6>Reason for Visit</h6>
+                  <p class="small mb-3">Ankle follow-up.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse patient-detail p-3 mt-3" id="sched-detail-manalo">
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Age</h6>
+                  <p class="small mb-3">25 years</p>
+                  <h6>Gender</h6>
+                  <p class="small mb-3">Female</p>
+                  <h6>Medical History</h6>
+                  <p class="small mb-3">Migraine - 15 Sep.</p>
+                </div>
+                <div class="col-md-6">
+                  <h6>Allergies</h6>
+                  <p class="small mb-3">None Recorded</p>
+                  <h6>Reason for Visit</h6>
+                  <p class="small mb-3">Migraine check-in.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-            </div>
-            
-<!---------Add Prescription-->
-
-<div class="card dash-card p-4 mt-3" id="prescriptionForm" style="display:none;">
-  <h5>Create Prescription</h5>
-    <label class="mt-3">Patient ID</label>
-      <input type="text" id="patientId" class="form-control" placeholder="Enter Patient ID" required>
-        <div class="mt-3"><label><input type="checkbox" id="notifySMS">Send SMS to Patient</label></div>
-          <div class="mt-2 mb-3"><label><input type="checkbox" id="sendPharmacy">Send to Partner Pharmacy</label></div>
-            <button class="btn btn-success" onclick="confirmPrescription()">Confirm & Send</button>
-</div>
+        </div>
 
         <!-- MY PATIENTS -->
         <div class="tab-pane fade" id="patients" role="tabpanel">
@@ -509,6 +555,40 @@
     </div>
   </div>
 </div>
+
+<!-- Create Prescription Modal -->
+
+<div class="modal fade" id="prescriptionModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title dash-heading">Create Prescription — <span id="rxPatientName"></span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="selectedPatient">
+        <div class="form-group">
+          <label class="dash-subtext small">Patient ID</label>
+          <input type="text" id="patientId" class="form-control" placeholder="Enter Patient ID" required>
+        </div>
+        <div class="form-group">
+          <label class="dash-subtext small">Medication / Prescription</label>
+          <input type="text" id="rxMedication" class="form-control" placeholder="e.g. Amoxicillin 500mg — 3x daily for 7 days">
+        </div>
+        <div class="form-group mb-3">
+          <label class="dash-subtext small">Notes for Patient</label>
+          <textarea id="rxNotes" class="form-control" rows="3" placeholder="Additional instructions or notes for the patient..."></textarea>
+        </div>
+        <div class="form-group"><label><input type="checkbox" id="notifySMS"> Send SMS to Patient</label></div>
+        <div class="form-group mb-0"><label><input type="checkbox" id="sendPharmacy"> Send to Partner Pharmacy</label></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success" onclick="confirmPrescription()">Confirm & Send</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- This is the end of the first-block -->
 
 <!-- This is the start of the second-block -->
@@ -667,44 +747,62 @@
   }
 
   function openPrescription(patientName) {
+    document.getElementById("rxPatientName").textContent = patientName;
+    document.getElementById("selectedPatient").value = patientName;
 
-  document.getElementById("prescriptionForm").style.display = "block";
+    // reset the form each time it's opened for a new patient
+    document.getElementById("patientId").value = "";
+    document.getElementById("rxMedication").value = "";
+    document.getElementById("rxNotes").value = "";
+    document.getElementById("notifySMS").checked = false;
+    document.getElementById("sendPharmacy").checked = false;
 
-  document.getElementById("selectedPatient").value = patientName;
-
-  document.getElementById("prescriptionForm")
-    .scrollIntoView({ behavior: "smooth" });
-}
-
-
-function confirmPrescription() {
-
-  let patient = document.getElementById("selectedPatient").value;
-  let patientId = document.getElementById("patientId").value;
-
-  let sms = document.getElementById("notifySMS").checked;
-  let pharmacy = document.getElementById("sendPharmacy").checked;
-
-
-  if (patientId === "") {
-    alert("Please enter Patient ID.");
-    return;
+    $('#prescriptionModal').modal('show');
   }
 
 
-  if (!sms && !pharmacy) {
-    alert("Please select SMS or Partner Pharmacy.");
-    return;
+  function confirmPrescription() {
+
+    let patient = document.getElementById("selectedPatient").value;
+    let patientId = document.getElementById("patientId").value.trim();
+    let medication = document.getElementById("rxMedication").value.trim();
+    let notes = document.getElementById("rxNotes").value.trim();
+
+    let sms = document.getElementById("notifySMS").checked;
+    let pharmacy = document.getElementById("sendPharmacy").checked;
+
+
+    if (patientId === "") {
+      alert("Please enter Patient ID.");
+      return;
+    }
+
+    if (medication === "") {
+      alert("Please enter the medication / prescription details.");
+      return;
+    }
+
+    if (!sms && !pharmacy) {
+      alert("Please select SMS or Partner Pharmacy.");
+      return;
+    }
+
+    var sentVia = [];
+    if (sms) sentVia.push("SMS");
+    if (pharmacy) sentVia.push("Partner Pharmacy");
+
+    alert(
+      "Prescription confirmed!\n\n" +
+      "Patient: " + patient +
+      "\nPatient ID: " + patientId +
+      "\nMedication: " + medication +
+      (notes ? "\nNotes: " + notes : "") +
+      "\nSent via: " + sentVia.join(", ")
+    );
+
+    $('#prescriptionModal').modal('hide');
   }
 
-
-  alert(
-    "Prescription confirmed!\n\n" +
-    "Patient: " + patient +
-    "\nPatient ID: " + patientId
-  );
-
-}
   function setNotePatient(name) {
     document.getElementById('notePatientName').textContent = name;
   }
