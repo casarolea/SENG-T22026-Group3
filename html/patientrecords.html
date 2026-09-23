@@ -49,149 +49,44 @@
 </nav>
 <!-- THIS IS THE END OF THE NAV BAR (MENU SECTION) -->
 
-<!-- This is the start of the first-block -->
-<section class="first-block">
-  <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
-    <div>
-      <h5 class="dash-heading mb-0 ralewayextrabold">Patient Records</h5>
-      <small class="dash-subtext">4 patients on file</small>
-    </div>
-    <div class="mt-2 mt-md-0">
-      <input type="text" class="form-control" id="recordSearch" placeholder="Search by name or patient ID..." onkeyup="filterRecords()" style="min-width:260px;">
-    </div>
+
+
+
+<!-- This is the start of the block -->
+<!-- gaea edits----------------- -->
+<div class="container mt-5">
+  <div class="row">
+
+    <!-- Patient List -->
+      <div class="col-md-3">
+
+    <h5 class="ralewayextrabold mb-3">PATIENT RECORDS</h5>
+
+    <ul class="list-group patient-bubble-list" id="patientList">
+      <li class="list-group-item patient-item bubble" data-id="PT-001">C. Decujos</li>
+      <li class="list-group-item patient-item bubble" data-id="PT-002">M. Dhungana</li>
+      <li class="list-group-item patient-item bubble" data-id="PT-003">G. Manalo</li>
+      <li class="list-group-item patient-item bubble" data-id="PT-004">K. Juhoon</li>
+    </ul>
+
   </div>
 
-  <div id="recordsList">
 
-    <!-- PATIENT 1 -->
-    <div class="card dash-card patient-row p-3 mb-3" data-search="c.dejucos pt-0001">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <div>
-          <strong class="dash-heading">C. Dejucos</strong>
-          <span class="patient-id">· Patient ID: PT-0001</span>
-          <div class="dash-subtext small">C.Dejucos@email.com · (04) 123 4567</div>
-        </div>
-        <div class="mt-2 mt-md-0">
-          <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#rec-dejucos">View Details</button>
-              </div>
-      </div>
-      <div class="collapse patient-detail p-3 mt-3" id="rec-dejucos">
-        <div class="row">
-          <div class="col-md-6">
-            <h6>Age</h6><p class="small mb-3">20 years</p>
-            <h6>DOB</h6><p class="small mb-3">24 Nov 2000</p>
-            <h6>Gender</h6><p class="small mb-3">Female</p>
-            <h6>Medical History</h6><p class="small mb-3">Mild hypertension – 14 Jan 2026.</p>
-          </div>
-          <div class="col-md-6">
-            <h6>Last Visit</h6><p class="small mb-3">14 Jan</p>
-            <h6>Next Visit</h6><p class="small mb-3">30 Sep</p>
-            <h6>Allergies</h6><p class="small mb-3">Peanuts, Penicillin</p>
-            <h6>Diagnosis History</h6><p class="small mb-3">No major surgeries. Family history of hypertension.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PATIENT 2 -->
-    <div class="card dash-card patient-row p-3 mb-3" data-search="g. manalo pt-0005">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <div>
-          <strong class="dash-heading">G. Manalo</strong>
-          <span class="patient-id">· Patient ID: PT-0005</span>
-          <div class="dash-subtext small">G.Manalo@email.com · (04) 987 6543</div>
-        </div>
-        <div class="mt-2 mt-md-0">
-          <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#rec-manalo">View Details</button>
-              </div>
-      </div>
-      <div class="collapse patient-detail p-3 mt-3" id="rec-manalo">
-        <div class="row">
-          <div class="col-md-6">
-            <h6>Age</h6><p class="small mb-3">25 years</p>
-            <h6>DOB</h6><p class="small mb-3">24 Nov 2000</p>
-            <h6>Gender</h6><p class="small mb-3">Female</p>
-            <h6>Medical History</h6><p class="small mb-3">Migraine – 15 Sep.</p>
-          </div>
-          <div class="col-md-6">
-            <h6>Last Visit</h6><p class="small mb-3">15 Sep</p>
-            <h6>Next Visit</h6><p class="small mb-3">30 Sep</p>
-            <h6>Allergies</h6><p class="small mb-3">None recorded</p>
-            <h6>Diagnosis History</h6><p class="small mb-3">No major surgeries. No chronic conditions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PATIENT 3 -->
-    <div class="card dash-card patient-row p-3 mb-3" data-search="m. dhungana madhav dhungana pt-0003">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <div>
-          <strong class="dash-heading">M. Dhungana</strong>
-          <span class="patient-id">· Patient ID: PT-0003</span>
-          <div class="dash-subtext small">M.Dhungana@email.com · (04) 123 4567</div>
-        </div>
-        <div class="mt-2 mt-md-0">
-          <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#rec-dhungana">View Details</button>
-          
-        </div>
-      </div>
-      <div class="collapse patient-detail p-3 mt-3" id="rec-dhungana">
-        <div class="row">
-          <div class="col-md-6">
-            <h6>Name</h6><p class="small mb-3">Madhav Dhungana</p>
-            <h6>Age</h6><p class="small mb-3">21 years</p>
-            <h6>DOB</h6><p class="small mb-3">10 May 2005</p>
-            <h6>Gender</h6><p class="small mb-3">Male</p>
-            <h6>Medical History</h6><p class="small mb-3">Sprained ankle – 04 March 2026.</p>
-          </div>
-          <div class="col-md-6">
-            <h6>Last Visit</h6><p class="small mb-3">04 March</p>
-            <h6>Next Visit</h6><p class="small mb-3">30 Sep</p>
-            <h6>Allergies</h6><p class="small mb-3">Shellfish</p>
-            <h6>Diagnosis History</h6><p class="small mb-3">No major surgeries. No chronic conditions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PATIENT 4 -->
-    <div class="card dash-card patient-row p-3 mb-3" data-search="k. juhoon kim juhoon pt-0007">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <div>
-          <strong class="dash-heading">K. Juhoon</strong>
-          <span class="patient-id">· Patient ID: PT-0007</span>
-          <div class="dash-subtext small">K.Juhoon@email.com · (04) 777 2468</div>
-        </div>
-        <div class="mt-2 mt-md-0">
-          <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#rec-juhoon">View Details</button>
-        </div>
-      </div>
-      <div class="collapse patient-detail p-3 mt-3" id="rec-juhoon">
-        <div class="row">
-          <div class="col-md-6">
-            <h6>Name</h6><p class="small mb-3">Kim Juhoon</p>
-            <h6>Age</h6><p class="small mb-3">19 years</p>
-            <h6>DOB</h6><p class="small mb-3">14 Jan 2007</p>
-            <h6>Gender</h6><p class="small mb-3">Female</p>
-            <h6>Medical History</h6><p class="small mb-3">Mild asthma diagnosed – 07 May.</p>
-          </div>
-          <div class="col-md-6">
-            <h6>Last Visit</h6><p class="small mb-3">07 May</p>
-            <h6>Next Visit</h6><p class="small mb-3">02 Oct</p>
-            <h6>Allergies</h6><p class="small mb-3">Pollen</p>
-            <h6>Diagnosis History</h6><p class="small mb-3">Asthma since childhood. No surgeries.</p>
-          </div>
-        </div>
+    <!-- Patient Details Panel -->
+    <div class="col-md-9">
+      <div id="patientDetails" class="p-4 border rounded">
+        <h4 class="ralewaybold">Select a patient to view details</h4>
       </div>
     </div>
 
   </div>
+</div>
 
-  <p class="dash-subtext small text-center mt-3" id="noResults" style="display:none;">No patients match your search.</p>
 
-</section>
-<!-- This is the end of the first-block -->
+
+
+<!------pitstop Gaea edits------->
+
 
 
 <!-- Optional JavaScript -->
@@ -231,21 +126,114 @@
 </footer>
 <!-- end of footer -->
 
-<script>
- 
 
-  function filterRecords() {
-    var q = document.getElementById('recordSearch').value.toLowerCase();
-    var rows = document.querySelectorAll('#recordsList .patient-row');
-    var visibleCount = 0;
-    rows.forEach(function (row) {
-      var match = row.getAttribute('data-search').indexOf(q) !== -1;
-      row.style.display = match ? '' : 'none';
-      if (match) visibleCount++;
-    });
-    document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+<!--------Gaea edits---------->
+<!--------scripts------------->
+
+
+<script>
+/* ----PATIENT DATA ------------------------------------------ */
+const patients = {
+  "PT-001": {
+    shortName: "C. Decujos",
+    name: "Cassandra Decujos",
+    dob: "2000-11-24",
+    gender: "Female",
+    lastVisit: "15 Sep 2025",
+    nextAppointment: "No appointment booked",
+    allergies: "None recorded",
+    diagnosis: "Migraine - 13 Sep 2025",
+    history: "No major surgeries. No chronic conditions."
+  },
+
+  "PT-002": {
+    shortName: "M. Dhungana",
+    name: "Madhav Dhungana",
+    dob: "1999-02-18",
+    gender: "Male",
+    lastVisit: "No previous appointment",
+    nextAppointment: "01 Oct 2026",
+    allergies: "None recorded. New patient.",
+    diagnosis: "None recorded. New patient.",
+    history: "None recorded. New patient."
+  },
+
+  "PT-003": {
+    shortName: "G. Manalo",
+    name: "Glorygen Manalo",
+    dob: "1988-09-28",
+    gender: "Female",
+    lastVisit: "14 Jan 2026",
+    nextAppointment: localStorage.getItem("PT-003_nextAppointment") || "No appointment booked",
+    allergies: "Peanuts, Penicillin",
+    diagnosis: "Mild hypertension - 14 Jan 2026",
+    history: "No major surgeries. Family history of hypertension."
+  },
+
+  "PT-004": {
+    shortName: "K. Juhoon",
+    name: "Kim Juhoon",
+    dob: "2008-01-03",
+    gender: "Male",
+    lastVisit: "25 Dec 2025",
+    nextAppointment: localStorage.getItem("PT-004_nextAppointment") || "No appointment booked",
+    allergies: "Pollens",
+    diagnosis: "Atopic dermatitis",
+    history: "No major surgeries. No chronic conditions."
   }
+};
+
+
+/* -----AGE CALCULATOR------------------------------------------ */
+function calculateAge(dob) {
+  const birth = new Date(dob);
+  const today = new Date();
+  let age = today.getFullYear() - birth.getFullYear();
+  const m = today.getMonth() - birth.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+    age--;
+  }
+  return age;
+}
+
+
+/* ------CLICK HANDLER — LOAD PATIENT DETAILS------------------------------------------ */
+document.querySelectorAll('.patient-item').forEach(item => {
+  item.addEventListener('click', () => {
+
+    // highlight active bubble
+    document.querySelectorAll('.patient-item').forEach(b => b.classList.remove('active'));
+    item.classList.add('active');
+
+    // get patient data
+    const id = item.getAttribute('data-id');
+    const p = patients[id];
+    const age = calculateAge(p.dob);
+
+    // load details
+    document.getElementById('patientDetails').innerHTML = `
+      <h4 class="ralewaybold">${p.shortName}</h4>
+      <p><strong>Patient ID:</strong> ${id}</p>
+      <p><strong>Name:</strong> ${p.name}</p>
+      <p><strong>DOB:</strong> ${new Date(p.dob).toLocaleDateString()}</p>
+      <p><strong>Age:</strong> ${age}</p>
+      <p><strong>Gender:</strong> ${p.gender}</p>
+      <p><strong>Last Visit:</strong> ${p.lastVisit}</p>
+      <p><strong>Next Appointment:</strong> ${p.nextAppointment}</p>
+      <p><strong>Allergies:</strong> ${p.allergies}</p>
+      <p><strong>Diagnosis:</strong> ${p.diagnosis}</p>
+      <p><strong>Medical History:</strong> ${p.history}</p>
+    `;
+  });
+});
+
 </script>
+
+
+
+
+
+<!----pitstop gaea edits------->
 
 </body>
 </html>
