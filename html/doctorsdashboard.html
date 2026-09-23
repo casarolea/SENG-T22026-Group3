@@ -466,60 +466,167 @@
 </div>
         </div>
 
-        <!-- DOCTORS -->
-        <div class="tab-pane fade" id="doctors" role="tabpanel">
-          <h5 class="dash-heading ralewayextrabold mb-3">Doctors</h5>
+       <!-- DOCTORS -->
+<div class="tab-pane fade" id="doctors" role="tabpanel">
 
-          <div class="card doctor-card you-card p-3 mb-4">
-            <div class="d-flex justify-content-between align-items-center flex-wrap">
-              <div class="d-flex align-items-center">
-                <div class="doctor-avatar mr-3">CN</div>
-                <div>
-                  <strong class="dash-heading">Dr. Chauncey Nieto </strong>
-                  <div class="dash-subtext small">Specialization: General Practitioner</div>
-                </div>
-                
-              </div>
-              <div class="d-flex align-items-center mt-2 mt-md-0">
-                <select class="form-control form-control-sm mr-2" style="width:auto;" id="myAvailability" onchange="updateAvailability(this)">
-                  <option value="available">Available</option>
-                  <option value="busy">Busy</option>
-                  <option value="offline">Offline</option>
-                </select>
-                  </div>
-            </div>
-            <div class="dash-subtext small mt-2" id="myWorkingHours">Working hours: 9:00am – 5:00pm</div>
-              </div>
-          
+  <h5 class="dash-heading ralewayextrabold mb-3">List of Doctors</h5>
 
-          <div class="card doctor-card you-card p-3 mb-4">
-            <div class="d-flex justify-content-between align-items-center flex-wrap">
-              <div class="d-flex align-items-center">
-                    <div class="doctor-avatar mr-3">YC</div>
-                    <div>
-                      <strong class="dash-heading">Dr. Yufan Chao</strong>
-                      <div class="dash-subtext small">Specialization: Psychiatrist</div>
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center mt-2 mt-md-0">
-                <select class="form-control form-control-sm mr-2" style="width:auto;" id="myAvailability" onchange="updateAvailability(this)">
-                  <option value="available">Available</option>
-                  <option value="busy">Busy</option>
-                  <option value="offline">Offline</option>
-                </select>
-                  </div>
-                </div>
-                <div class="dash-subtext small mt-2">Working hours: 8:00am – 4:00pm</div>
-              </div>
-            </div>
+  <!-- Doctor 1 -->
+  <div class="card doctor-card p-3 mb-3">
 
-              </div>
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+      <!-- Doctor Name -->
+      <div class="d-flex align-items-center">
+        <div class="doctor-avatar mr-3">CN</div>
+
+        <div>
+          <strong class="dash-heading">
+            Dr. Chauncey Nieto
+          </strong>
+
+          <div class="dash-subtext small">
+            General Practitioner
+          </div>
         </div>
-
       </div>
+
+      <!-- Availability -->
+      <span class="badge badge-success mt-2 mt-md-0">
+        Available
+      </span>
+
     </div>
+
+
+    <!-- Doctor Details -->
+    <div class="row mt-3">
+
+      <div class="col-md-4 mb-2">
+        <strong>Specialization</strong>
+        <div class="dash-subtext">
+          General Practitioner
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Doctor ID</strong>
+        <div class="dash-subtext">
+          DOC-001
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Email</strong>
+        <div class="dash-subtext">
+          chauncey@example.com
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Phone</strong>
+        <div class="dash-subtext">
+          0400 123 456
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Availability <br> Wed-30 sep</strong>
+        <div class="dash-subtext">
+          Available 
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Working Hours</strong>
+        <div class="dash-subtext">
+          9:00am – 5:00pm
+        </div>
+      </div>
+
+    </div>
+
   </div>
-</section>
+
+
+  <!-- Doctor 2 -->
+  <div class="card doctor-card p-3 mb-3">
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+      <div class="d-flex align-items-center">
+        <div class="doctor-avatar mr-3">YC</div>
+
+        <div>
+          <strong class="dash-heading">
+            Dr. Yufan Chao
+          </strong>
+
+          <div class="dash-subtext small">
+            Psychiatrist
+          </div>
+        </div>
+      </div>
+
+      <span class="badge badge-warning mt-2 mt-md-0">
+        Busy
+      </span>
+
+    </div>
+
+
+    <!-- Doctor Details -->
+    <div class="row mt-3">
+
+      <div class="col-md-4 mb-2">
+        <strong>Specialization</strong>
+        <div class="dash-subtext">
+          Psychiatrist
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Doctor ID</strong>
+        <div class="dash-subtext">
+          DOC-002
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Email</strong>
+        <div class="dash-subtext">
+          yufan@example.com
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Phone</strong>
+        <div class="dash-subtext">
+          0400 234 567
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Availability <br> Wed 30 Sep
+        </strong>
+        <div class="dash-subtext">
+          Busy
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <strong>Working Hours</strong>
+        <div class="dash-subtext">
+          8:00am – 4:00pm
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+    </section>
 
 <!-- Add Note Modal -->
 
