@@ -309,9 +309,9 @@
 
 
 /* Gaea---------------start of edits --------
-/* 
+/* ============================
    Patients Page Banner
-   */
+   ============================ */
 
 .patient-banner {
   position: relative;
@@ -349,13 +349,9 @@
   color: white;
 }
 
-
-
-
-
-/* 
+/* ============================
    Patients Dashboard Feature Boxes
-   */
+   ============================ */
 
 .dash-card {
   border: none;
@@ -375,12 +371,9 @@
   border-radius: 8px;
 }
 
-
-
-
-/* 
+/* ============================
    Top Book Now Button
-    */
+   ============================ */
 
 /* Top Book Now Button */
 .btn-action-green {
@@ -399,8 +392,6 @@
   border-color: #8dc79a;
 }
 
-
-
 /* Selected time slot highlight */
 .active-slot {
   background-color: #2d384d !important;
@@ -409,13 +400,43 @@
 }
 
 
+/*doctor availability*/
+.unavailable {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.7;
+}
+
+#availabilityModal .modal-content {
+  border-radius: 12px;
+}
+
+
+
+/* Patient bubbles */
+.patient-bubble-list .bubble {
+  border-radius: 30px;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'RalewayB';
+  color: #2d384d;
+}
+
+.patient-bubble-list .bubble:hover {
+  background-color: #e8f5e9; /* soft mint tint */
+  border-color: #a0d3ab;     /* your SmartClinic+ green */
+  transform: translateY(-2px);
+}
+
+.patient-bubble-list .bubble.active {
+  background-color: #a0d3ab;
+  color: #ffffff;
+  border-color: #8dc79a;
+}
+
+
 /* Gaea---------------end----------
-
-
-
-
-
-
-
-
-
