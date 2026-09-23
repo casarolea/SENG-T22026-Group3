@@ -119,30 +119,34 @@
 
       <!-- View Records Box -->
       <div class="col-md-4 mb-4">
-        <div class="card dash-card h-100 text-center p-3">
-          <img src="../images/viewrecords.jpg" class="img-fluid mb-3" alt="View Records">
-          <h5 class="ralewaybold">View Records</h5>
-        </div>
-      </div>
+  <div class="card dash-card h-100 text-center p-3"
+       data-toggle="modal" data-target="#patientRecordModal"
+       style="cursor: pointer;">
+    <img src="../images/viewrecords.jpg" class="img-fluid mb-3" alt="View Records">
+    <h5 class="ralewaybold">View Records</h5>
+  </div>
+</div>
+
 
       <!-- Check Availability Box -->
       <div class="col-md-4 mb-4">
-        <div class="card dash-card h-100 text-center p-3">
-          <img src="../images/availability.jpg" class="img-fluid mb-3" alt="Check Availability">
-          <h5 class="ralewaybold">Check Availability</h5>
-        </div>
-      </div>
-
-    </div>
+  <div class="card dash-card h-100 text-center p-3"
+       data-toggle="modal" data-target="#availabilityModal"
+       style="cursor: pointer;">
+    <img src="../images/availability.jpg" class="img-fluid mb-3" alt="Check Availability">
+    <h5 class="ralewaybold">Check Availability</h5>
   </div>
+</div>
+
 
 </section>
 
+<!---============ pitstop G.MANALO edits=====================-->
 
 <!-- THIRD BLOCK ============to be edited=============-->
 <section class="third-block"></section>
 
-<!---============ pitstop G.MANALO edits=====================-->
+
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -196,12 +200,9 @@
 
 
 <!---============  G.MANALO edits=====================-->
-<!-- ============================
-     Pop-ups!!!!!!!!!!!!!!!!!!!!
-     ============================ -->
 
 
-<!-- BOOKING POPUP -->
+<!-- BOOKING POPUP ---------------------------->
 <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content p-3">
@@ -222,9 +223,9 @@
         <div class="form-group">
           <label class="ralewaybold">Select doctor</label>
           <select class="form-control">
-            <option>Dr. Ismael Green</option>
-            <option>Dr. Amelia Reyes</option>
-            <option>Dr. Marcus Tan</option>
+            <option>Dr. Chauncey Nieto</option>
+            <option>Dr. Yufan Chao</option>
+            <option>Dr. Amelia Tan</option>
           </select>
         </div>
 
@@ -257,7 +258,7 @@
 
 
 
-<!-- BOOKING COMPLETED POPUP -->
+<!-- BOOKING COMPLETED POPUP ----------------------------->
 <div class="modal fade" id="bookingCompleteModal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content p-3">
@@ -302,13 +303,176 @@
 
 
 
+<!-- PATIENT RECORD POPUP ----------------------->
+<div class="modal fade" id="patientRecordModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content p-4">
+
+      <div class="modal-header">
+        <h5 class="modal-title ralewaybold">Patient Record</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Personal Details -->
+        <h6 class="ralewaybold mb-3">Personal Details - PT-0001</h6>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <p><strong>Name:</strong> G. Manalo</p>
+            <p><strong>DOB:</strong> 23 Sep 1988</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Age:</strong> 39</p>
+            <p><strong>Sex:</strong> Female</p>
+          </div>
+        </div>
+
+        <!-- Upcoming Appointment -->
+        <h6 class="ralewaybold mb-3">Upcoming Appointment</h6>
+
+        <p id="upcomingAppointmentText">
+          No upcoming appointment yet.
+        </p>
+
+        <button class="btn btn-action-green mr-2" id="rescheduleBtn">
+          Reschedule
+        </button>
+
+        <button class="btn btn-action-muted" id="cancelAppointmentBtn">
+          Cancel
+        </button>
+
+
+        <hr>
+
+
+        <!-- Allergies -->
+        <h6 class="ralewaybold mb-3">Allergies</h6>
+        <p>Peanuts, Penicillin</p>
+
+        <hr>
+
+        <!-- Diagnosis History -->
+        <h6 class="ralewaybold mb-3">Diagnosis History</h6>
+        <p>Mild hypertension – 14 Jan 2026</p>
+
+        <hr>
+
+        <!-- Medical History -->
+        <h6 class="ralewaybold mb-3">Medical History</h6>
+        <p>No major surgeries. Family history of hypertension.</p>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-action-green px-4" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- DOCTOR AVAILABILITY POPUP----------------- -->
+<div class="modal fade" id="availabilityModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content p-4" style="max-height: 80vh; overflow-y: auto;">
+
+      <div class="modal-header">
+        <h5 class="modal-title ralewaybold">Doctor Availability</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Doctor 1 -->
+        <div class="mb-4">
+          <h6 class="ralewaybold">Personal Details - D-0001</h6>
+          <h5 class="ralewaybold mt-2">Dr. Chauncey Nieto</h5>
+          <p>General Practitioner</p>
+          <p><strong>Phone:</strong> 0400 123 456</p>
+          <p><strong>Email:</strong> chauncey@SmartClinic.com</p>
+          <p><strong>Working Hours:</strong> 9:00am – 5:00pm</p>
+
+          <h6 class="ralewaybold mt-3">Availability for Wednesday, 30 September</h6>
+          <ul class="list-group">
+            <li class="list-group-item">9:00–9:30</li>
+            <li class="list-group-item">9:30–10:00</li>
+            <li class="list-group-item">10:00–10:30</li>
+            <li class="list-group-item unavailable">10:30–11:00</li>
+            <li class="list-group-item unavailable">11:00–11:30</li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <!-- Doctor 2 -->
+        <div class="mb-4">
+          <h6 class="ralewaybold">Personal Details - D-0002</h6>
+          <h5 class="ralewaybold mt-2">Dr. Yufan Chao</h5>
+          <p>Psychiatrist</p>
+          <p><strong>Phone:</strong> 0400 234 567</p>
+          <p><strong>Email:</strong> yufan@SmartClinic.com</p>
+          <p><strong>Working Hours:</strong> 8:00am – 4:00pm</p>
+
+          <h6 class="ralewaybold mt-3">Availability for Wednesday, 30 September</h6>
+          <ul class="list-group">
+            <li class="list-group-item">9:00–9:30</li>
+            <li class="list-group-item">9:30–10:00</li>
+            <li class="list-group-item unavailable">10:00–10:30</li>
+            <li class="list-group-item unavailable">10:30–11:00</li>
+            <li class="list-group-item unavailable">11:00–11:30</li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <!-- Doctor 3 -->
+        <div class="mb-4">
+          <h6 class="ralewaybold">Personal Details - D-0003</h6>
+          <h5 class="ralewaybold mt-2">Dr. Amelia Tan</h5>
+          <p>OB-Gyne</p>
+          <p><strong>Phone:</strong> 0400 890 123</p>
+          <p><strong>Email:</strong> amelia@SmartClinic.com</p>
+          <p><strong>Working Hours:</strong> 9:30am – 3:00pm</p>
+
+          <h6 class="ralewaybold mt-3">Availability for Wednesday, 30 September</h6>
+          <ul class="list-group">
+            <li class="list-group-item unavailable">9:00–9:30</li>
+            <li class="list-group-item">9:30–10:00</li>
+            <li class="list-group-item">10:00–10:30</li>
+            <li class="list-group-item unavailable">10:30–11:00</li>
+            <li class="list-group-item unavailable">11:00–11:30</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-action-green px-4" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
 <!--  Additional scripts for pop-ups -->
 
 
 <!-- f script for pop-up booking-->
 
- <script>
-  // Highlight selected time slot
+ <!-- Highlight selected time slot -->
+<script>
   document.querySelectorAll('.time-slot').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.time-slot').forEach(b => b.classList.remove('active-slot'));
@@ -317,18 +481,19 @@
   });
 </script>
 
-<!-- confirm booking-->
- <script>
-  // Confirm Booking button logic
-  document.querySelector('.btn-action-green.px-4').addEventListener('click', function () {
 
-    const doctor = document.querySelector('.modal-body select').value;
-    const date = document.querySelector('.modal-body input[type="date"]').value;
+<!-- Confirm Booking + Update Upcoming Appointment -->
+<script>
+  document.querySelector('#bookingModal .btn-action-green.px-4').addEventListener('click', function () {
+
+    const doctor = document.querySelector('#bookingModal select').value;
+    const date = document.querySelector('#bookingModal input[type="date"]').value;
     const selectedSlot = document.querySelector('.active-slot')
                          ? document.querySelector('.active-slot').innerText
                          : null;
 
-    // VALIDATION — prevent confirmation if missing fields
+    
+    // VALIDATION
     if (!doctor) {
       alert("Please select a doctor.");
       return;
@@ -344,31 +509,71 @@
       return;
     }
 
-    // confirmation modal
+    // Update confirmation modal
     document.getElementById('confirmDoctor').innerText = doctor;
     document.getElementById('confirmDate').innerText = date;
     document.getElementById('confirmTime').innerText = selectedSlot;
 
+    // Update Upcoming Appointment in View Records modal
+    document.getElementById('upcomingAppointmentText').innerText =
+      `${date}, ${selectedSlot} – ${doctor}`;
+
+
+    // Save next appointment for Glorygen (PT-003)
+    localStorage.setItem("PT-003_nextAppointment", `${date}, ${selectedSlot}`);
+
+    // Save next appointment for Kim Juhoon (PT-004)
+    localStorage.setItem("PT-004_nextAppointment", `${date}, ${selectedSlot}`);
+
+
     // Close booking modal
     $('#bookingModal').modal('hide');
 
-    // Open confirmation modal
+    // Open booking completed modal
     $('#bookingCompleteModal').modal('show');
   });
 </script>
 
 
-
-
-<!-- want to reschedule or cancel?-->
-
+<!-- Booking Completed → Return to Booking -->
 <script>
-  // Return to booking modal
   document.querySelector('#bookingCompleteModal .btn-action-green').addEventListener('click', function () {
     $('#bookingCompleteModal').modal('hide');
     $('#bookingModal').modal('show');
   });
 </script>
+
+
+<!-- View Records → Reschedule (Return to Booking) -->
+<script>
+  document.getElementById('rescheduleBtn').addEventListener('click', function () {
+    $('#patientRecordModal').modal('hide');
+    $('#bookingModal').modal('show');
+  });
+</script>
+
+
+<script>
+  // Cancel Appointment → Clear upcoming appointment
+  document.getElementById('cancelAppointmentBtn').addEventListener('click', function () {
+
+    // Clear the upcoming appointment text
+    document.getElementById('upcomingAppointmentText').innerText =
+      "No upcoming appointment yet.";
+
+    // Clear confirmation modal values (so old data doesn't linger)
+    document.getElementById('confirmDoctor').innerText = "";
+    document.getElementById('confirmDate').innerText = "";
+    document.getElementById('confirmTime').innerText = "";
+
+    // Close the patient record modal
+    $('#patientRecordModal').modal('hide');
+  });
+</script>
+
+
+
+
 
 <!-------Pitstop G.MANALO Edits------------->
 
