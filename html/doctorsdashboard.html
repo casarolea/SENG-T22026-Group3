@@ -4,7 +4,12 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
     <title>SmartClinic+ | Doctor Dashboard</title>
     <link rel="icon" type="image/x-icon" href="../images/logoo.png">
 </head>
@@ -12,566 +17,1317 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light first-block">
-    <a class="norwester nav-name" href="index.html"><img class="logo" src="../images/logoo.png" alt="SmartClinic+ Logo" title="SmartClinic+ logo">SmartClinic+</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="norwester nav-name" href="index.html">
+        <img class="logo"
+             src="../images/logoo.png"
+             alt="SmartClinic+ Logo"
+             title="SmartClinic+ logo">
+        SmartClinic+
+    </a>
+
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ralewayextrabold nav-text">
-            <li class="nav-item active">
-                <a class="nav-item nav-link nav-text1 active" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
+
             <li class="nav-item">
-                <a class="nav-item nav-link nav-text2" href="patients.html">For Patients</a>
+                <a class="nav-item nav-link nav-text1" href="index.html">
+                    Home
+                </a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-item nav-link nav-text2" href="patients.html">
+                    For Patients
+                </a>
+            </li>
+
             <li class="nav-item dropdown nav-text1">
-                <a class="nav-link dropdown-toggle nav-text1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle nav-text1"
+                   href="#"
+                   id="navbarDropdown"
+                   role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true"
+                   aria-expanded="false">
                     For Staff
                 </a>
+
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item nav-text2" href="doctorsdashboard.html">Doctor Dashboard</a>
-                    <a class="dropdown-item nav-text2" href="tasks.html">Tasks</a>
-                    <a class="dropdown-item nav-text2" href="patientrecords.html">Patient Records</a>
+                    <a class="dropdown-item nav-text2 active"
+                       href="doctorsdashboard.html">
+                        Doctor Dashboard
+                    </a>
+
+                    <a class="dropdown-item nav-text2" href="tasks.html">
+                        Tasks
+                    </a>
+
+                    <a class="dropdown-item nav-text2"
+                       href="patientrecords.html">
+                        Patient Records
+                    </a>
                 </div>
             </li>
+
         </ul>
     </div>
 </nav>
 
 <section class="first-block">
+
     <div class="row">
+
         <div class="col-3">
-            <div class="nav flex-column nav-pills" id="dashboard-tab" role="tablist">
-                <a class="nav-link active" id="overview-tab" data-toggle="pill" href="#overview" role="tab">Overview</a>
-                <a class="nav-link" id="schedule-tab" data-toggle="pill" href="#schedule" role="tab">Schedule</a>
-                <a class="nav-link" id="patients-tab" data-toggle="pill" href="#patients" role="tab">My Patients</a>
-                <a class="nav-link" id="doctors-tab" data-toggle="pill" href="#doctors" role="tab"> Doctors</a>
+            <div class="nav flex-column nav-pills"
+                 id="dashboard-tab"
+                 role="tablist">
+
+                <a class="nav-link active"
+                   id="overview-tab"
+                   data-toggle="pill"
+                   href="#overview"
+                   role="tab">
+                    Overview
+                </a>
+
+                <a class="nav-link"
+                   id="schedule-tab"
+                   data-toggle="pill"
+                   href="#schedule"
+                   role="tab">
+                    Schedule
+                </a>
+
+                <a class="nav-link"
+                   id="patients-tab"
+                   data-toggle="pill"
+                   href="#patients"
+                   role="tab">
+                    My Patients
+                </a>
+
+                <a class="nav-link"
+                   id="doctors-tab"
+                   data-toggle="pill"
+                   href="#doctors"
+                   role="tab">
+                    Doctors
+                </a>
+
             </div>
         </div>
 
         <div class="col-9">
+
             <div class="tab-content" id="dashboard-tabContent">
 
-                <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                <!-- OVERVIEW -->
+                <div class="tab-pane fade show active"
+                     id="overview"
+                     role="tabpanel">
+
                     <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
                         <div>
-                            <h5 class="dash-heading mb-0 ralewayextrabold">Doctor Dashboard</h5>
-                            <small class="dash-subtext">Wednesday, 30 September 2026</small>
+                            <h5 class="dash-heading mb-0 ralewayextrabold">
+                                Doctor Dashboard
+                            </h5>
+
+                            <small class="dash-subtext">
+                                Wednesday, 30 September 2026
+                            </small>
                         </div>
                     </div>
 
                     <div class="row mb-2">
+
                         <div class="col-6 col-md-3 mb-3">
                             <div class="card stat-card p-3">
-                                <span class="stat-label">Today's appointments</span>
-                                <h3 class="stat-value mb-0" id="stat-total">6</h3>
+                                <span class="stat-label">
+                                    Today's appointments
+                                </span>
+
+                                <h3 class="stat-value mb-0" id="stat-total">
+                                    6
+                                </h3>
                             </div>
                         </div>
+
                         <div class="col-6 col-md-3 mb-3">
                             <div class="card stat-card accent-green p-3">
-                                <span class="stat-label">Average wait Time</span>
-                                <h3 class="stat-value mb-0" id="stat-waiting">14mins</h3>
+                                <span class="stat-label">
+                                    Average wait Time
+                                </span>
+
+                                <h3 class="stat-value mb-0" id="stat-waiting">
+                                    14mins
+                                </h3>
                             </div>
                         </div>
+
                         <div class="col-6 col-md-3 mb-3">
                             <div class="card stat-card p-3">
-                                <span class="stat-label">Currently in Queue</span>
-                                <h3 class="stat-value mb-0" id="stat-reports">2</h3>
+                                <span class="stat-label">
+                                    Currently in Queue
+                                </span>
+
+                                <h3 class="stat-value mb-0" id="stat-reports">
+                                    2
+                                </h3>
                             </div>
                         </div>
+
                     </div>
 
                     <div class="row">
                         <div class="col-lg-10 mb-3">
+
                             <div class="card dash-card p-3 h-100">
-                                <h6 class="mb-3">Quick Patient Queue</h6>
+
+                                <h6 class="mb-3">
+                                    Quick Patient Queue
+                                </h6>
+
                                 <table class="table table-borderless mb-0 align-middle">
+
                                     <thead>
-                                        <tr class="dash-subtext"><th>Patient</th><th>Time</th><th>Status</th><th>Action</th><th>Prescribe</th></tr>
+                                        <tr class="dash-subtext">
+                                            <th>Patient</th>
+                                            <th>Time</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                            <th>Prescribe</th>
+                                        </tr>
                                     </thead>
+
                                     <tbody id="appointmentQueue"></tbody>
+
                                 </table>
+
                             </div>
+
                         </div>
                     </div>
-                </div>
 
-                <div class="tab-pane fade" id="schedule" role="tabpanel">
+                </div>
+                <!-- SCHEDULE -->
+                <div class="tab-pane fade"
+                     id="schedule"
+                     role="tabpanel">
+
                     <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
-                        <h5 class="dash-heading mb-0 ralewayextrabold">My Schedule</h5>
-                        <small class="dash-subtext">Wednesday, 30 September 2026</small>
+
+                        <h5 class="dash-heading mb-0 ralewayextrabold">
+                            My Schedule
+                        </h5>
+
+                        <small class="dash-subtext">
+                            Wednesday, 30 September 2026
+                        </small>
+
                     </div>
 
                     <div class="card dash-card p-3 mb-4">
+
                         <h6 class="mb-3">Today's Appointments</h6>
+
                         <table class="table align-middle">
+
                             <thead>
-                                <tr class="dash-subtext"><th>Patient</th><th>Time</th><th>Status</th><th>Actions</th><th>View</th></tr>
+                                <tr class="dash-subtext">
+                                    <th>Patient</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                    <th>View</th>
+                                </tr>
                             </thead>
+
                             <tbody>
+
                                 <tr>
                                     <td class="text-muted">Open slot</td>
                                     <td class="text-muted">9:00–9:30</td>
-                                    <td><span class="badge badge-cancelled">Open</span></td>
+                                    <td>
+                                        <span class="badge badge-cancelled">
+                                            Open
+                                        </span>
+                                    </td>
                                     <td class="text-muted">—</td>
                                     <td class="text-muted">—</td>
                                 </tr>
+
                                 <tr>
                                     <td>C. Dejucos</td>
                                     <td>9:00–9:30</td>
-                                    <td><span class="badge appt-status badge-inprogress">In Progress</span></td>
+
                                     <td>
-                                        <button class="btn btn-sm btn-action-green mr-1" onclick="setStatus(this,'Completed')">Complete</button>
-                                        <button class="btn btn-sm btn-outline-secondary" onclick="setStatus(this,'Cancelled')">Cancel</button>
+                                        <span class="badge appt-status badge-inprogress">
+                                            In Progress
+                                        </span>
                                     </td>
-                                    <td><button class="btn btn-sm btn-action-blue" data-toggle="collapse" data-target="#sched-detail-dejucos">View Details</button></td>
+
+                                    <td>
+                                        <button class="btn btn-sm btn-action-green mr-1"
+                                                onclick="setStatus(this,'Completed')">
+                                            Complete
+                                        </button>
+
+                                        <button class="btn btn-sm btn-outline-secondary"
+                                                onclick="setStatus(this,'Cancelled')">
+                                            Cancel
+                                        </button>
+                                    </td>
+
+                                    <td>
+                                        <button class="btn btn-sm btn-action-blue"
+                                                data-toggle="collapse"
+                                                data-target="#sched-detail-dejucos">
+                                            View Details
+                                        </button>
+                                    </td>
                                 </tr>
+
                                 <tr>
                                     <td>M. Dhungana</td>
                                     <td>9:30–10:00</td>
-                                    <td><span class="badge appt-status badge-waiting">Waiting</span></td>
+
                                     <td>
-                                        <button class="btn btn-sm btn-action-green mr-1" onclick="setStatus(this,'Completed')">Complete</button>
-                                        <button class="btn btn-sm btn-action-blue mr-1" onclick="setStatus(this,'In Progress')">Start</button>
-                                        <button class="btn btn-sm btn-action-muted mr-1" onclick="reschedule(this)">Reschedule</button>
-                                        <button class="btn btn-sm btn-outline-secondary" onclick="setStatus(this,'Cancelled')">Cancel</button>
+                                        <span class="badge appt-status badge-waiting">
+                                            Waiting
+                                        </span>
                                     </td>
-                                    <td><button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#sched-detail-dhungana">View Details</button></td>
+
+                                    <td>
+                                        <button class="btn btn-sm btn-action-green mr-1"
+                                                onclick="setStatus(this,'Completed')">
+                                            Complete
+                                        </button>
+
+                                        <button class="btn btn-sm btn-action-blue mr-1"
+                                                onclick="setStatus(this,'In Progress')">
+                                            Start
+                                        </button>
+
+                                        <button class="btn btn-sm btn-action-muted mr-1"
+                                                onclick="reschedule(this)">
+                                            Reschedule
+                                        </button>
+
+                                        <button class="btn btn-sm btn-outline-secondary"
+                                                onclick="setStatus(this,'Cancelled')">
+                                            Cancel
+                                        </button>
+                                    </td>
+
+                                    <td>
+                                        <button class="btn btn-sm btn-action-blue mr-1"
+                                                data-toggle="collapse"
+                                                data-target="#sched-detail-dhungana">
+                                            View Details
+                                        </button>
+                                    </td>
                                 </tr>
+
                                 <tr>
                                     <td>G. Manalo</td>
                                     <td>10:00–10:30</td>
-                                    <td><span class="badge appt-status badge-waiting">Waiting</span></td>
+
                                     <td>
-                                        <button class="btn btn-sm btn-action-green mr-1" onclick="setStatus(this,'Completed')">Complete</button>
-                                        <button class="btn btn-sm btn-action-blue mr-1" onclick="setStatus(this,'In Progress')">Start</button>
-                                        <button class="btn btn-sm btn-action-muted mr-1" onclick="reschedule(this)">Reschedule</button>
-                                        <button class="btn btn-sm btn-outline-secondary" onclick="setStatus(this,'Cancelled')">Cancel</button>
+                                        <span class="badge appt-status badge-waiting">
+                                            Waiting
+                                        </span>
                                     </td>
-                                    <td><button class="btn btn-sm btn-action-blue" data-toggle="collapse" data-target="#sched-detail-manalo">View Details</button></td>
+
+                                    <td>
+                                        <button class="btn btn-sm btn-action-green mr-1"
+                                                onclick="setStatus(this,'Completed')">
+                                            Complete
+                                        </button>
+
+                                        <button class="btn btn-sm btn-action-blue mr-1"
+                                                onclick="setStatus(this,'In Progress')">
+                                            Start
+                                        </button>
+
+                                        <button class="btn btn-sm btn-action-muted mr-1"
+                                                onclick="reschedule(this)">
+                                            Reschedule
+                                        </button>
+
+                                        <button class="btn btn-sm btn-outline-secondary"
+                                                onclick="setStatus(this,'Cancelled')">
+                                            Cancel
+                                        </button>
+                                    </td>
+
+                                    <td>
+                                        <button class="btn btn-sm btn-action-blue"
+                                                data-toggle="collapse"
+                                                data-target="#sched-detail-manalo">
+                                            View Details
+                                        </button>
+                                    </td>
                                 </tr>
+
                                 <tr>
                                     <td class="text-muted">Open slot</td>
                                     <td class="text-muted">10:30–11:00</td>
-                                    <td><span class="badge badge-cancelled">Open</span></td>
+                                    <td>
+                                        <span class="badge badge-cancelled">
+                                            Open
+                                        </span>
+                                    </td>
                                     <td class="text-muted">—</td>
                                     <td class="text-muted">—</td>
                                 </tr>
+
                             </tbody>
                         </table>
 
-                        <div class="collapse patient-detail p-3 mt-3" id="sched-detail-dejucos">
+                        <div class="collapse patient-detail p-3 mt-3"
+                             id="sched-detail-dejucos">
+
                             <div class="row">
+
                                 <div class="col-md-6">
                                     <h6>Age</h6>
                                     <p class="small mb-3">20 years</p>
+
                                     <h6>Gender</h6>
                                     <p class="small mb-3">Female</p>
+
                                     <h6>Medical History</h6>
-                                    <p class="small mb-3">Mild hypertension - 14 Jan 2026.</p>
+                                    <p class="small mb-3">
+                                        Mild hypertension - 14 Jan 2026.
+                                    </p>
                                 </div>
+
                                 <div class="col-md-6">
                                     <h6>Allergies</h6>
-                                    <p class="small mb-3">Peanuts, Penicillin</p>
+                                    <p class="small mb-3">
+                                        Peanuts, Penicillin
+                                    </p>
+
                                     <h6>Reason for Visit</h6>
-                                    <p class="small mb-3">Blood pressure follow-up.</p>
+                                    <p class="small mb-3">
+                                        Blood pressure follow-up.
+                                    </p>
                                 </div>
+
                             </div>
                         </div>
 
-                        <div class="collapse patient-detail p-3 mt-3" id="sched-detail-dhungana">
+                        <div class="collapse patient-detail p-3 mt-3"
+                             id="sched-detail-dhungana">
+
                             <div class="row">
+
                                 <div class="col-md-6">
                                     <h6>Age</h6>
                                     <p class="small mb-3">21 years</p>
+
                                     <h6>Gender</h6>
                                     <p class="small mb-3">Male</p>
+
                                     <h6>Medical History</h6>
-                                    <p class="small mb-3">Sprained ankle - 04 March 2026.</p>
+                                    <p class="small mb-3">
+                                        Sprained ankle - 04 March 2026.
+                                    </p>
                                 </div>
+
                                 <div class="col-md-6">
                                     <h6>Allergies</h6>
                                     <p class="small mb-3">Shellfish</p>
+
                                     <h6>Reason for Visit</h6>
-                                    <p class="small mb-3">Ankle follow-up.</p>
+                                    <p class="small mb-3">
+                                        Ankle follow-up.
+                                    </p>
                                 </div>
+
                             </div>
                         </div>
 
-                        <div class="collapse patient-detail p-3 mt-3" id="sched-detail-manalo">
+                        <div class="collapse patient-detail p-3 mt-3"
+                             id="sched-detail-manalo">
+
                             <div class="row">
+
                                 <div class="col-md-6">
                                     <h6>Age</h6>
                                     <p class="small mb-3">25 years</p>
+
                                     <h6>Gender</h6>
                                     <p class="small mb-3">Female</p>
+
                                     <h6>Medical History</h6>
-                                    <p class="small mb-3">Migraine - 15 Sep.</p>
+                                    <p class="small mb-3">
+                                        Migraine - 15 Sep.
+                                    </p>
                                 </div>
+
                                 <div class="col-md-6">
                                     <h6>Allergies</h6>
-                                    <p class="small mb-3">None Recorded</p>
+                                    <p class="small mb-3">
+                                        None Recorded
+                                    </p>
+
                                     <h6>Reason for Visit</h6>
-                                    <p class="small mb-3">Migraine check-in.</p>
+                                    <p class="small mb-3">
+                                        Migraine check-in.
+                                    </p>
                                 </div>
+
                             </div>
                         </div>
+
                     </div>
                 </div>
+                      <!-- MY PATIENTS -->
+                <div class="tab-pane fade"
+                     id="patients"
+                     role="tabpanel">
 
-                <div class="tab-pane fade" id="patients" role="tabpanel">
-                    <h5 class="dash-heading ralewayextrabold mb-3">My Patients <small class="dash-subtext">18 total</small></h5>
+                    <h5 class="dash-heading ralewayextrabold mb-3">
+                        My Patients
+                        <small class="dash-subtext">18 total</small>
+                    </h5>
 
+                    <!-- PATIENT 1 -->
                     <div class="card dash-card patient-row p-3 mb-3">
+
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
+
                             <div>
                                 <strong class="dash-heading">C.Dejucos</strong>
-                                <span class="patient-id">· Patient ID:PT-0001</span>
-                                <div class="dash-subtext small">C.Dejucos@email.com · (04) 123 4567</div>
+                                <span class="patient-id">
+                                    · Patient ID:PT-0001
+                                </span>
+
+                                <div class="dash-subtext small">
+                                    C.Dejucos@email.com · (04) 123 4567
+                                </div>
                             </div>
+
                             <div class="mt-2 mt-md-0">
-                                <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-dejucos">View Details</button>
-                                <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('C.Dejucos')">Add Note</button>
+
+                                <button class="btn btn-sm btn-action-blue mr-1"
+                                        data-toggle="collapse"
+                                        data-target="#detail-dejucos">
+                                    View Details
+                                </button>
+
+                                <button class="btn btn-sm btn-action-green"
+                                        data-toggle="modal"
+                                        data-target="#noteModal"
+                                        onclick="setNotePatient('C.Dejucos')">
+                                    Add Note
+                                </button>
+
                             </div>
+
                         </div>
-                        <div class="collapse patient-detail p-3 mt-3" id="detail-dejucos">
+
+                        <div class="collapse patient-detail p-3 mt-3"
+                             id="detail-dejucos">
+
                             <div class="row">
+
                                 <div class="col-md-6">
                                     <h6>Age</h6>
                                     <p class="small mb-3">20 years</p>
+
                                     <h6>DOB</h6>
                                     <p class="small mb-3">24 Nov 2000</p>
+
                                     <h6>Gender</h6>
                                     <p class="small mb-3">Female</p>
+
                                     <h6>Medical History</h6>
-                                    <p class="small mb-3">Mild hypertension - 14 Jan 2026 allergies.</p>
+                                    <p class="small mb-3">
+                                        Mild hypertension - 14 Jan 2026 allergies.
+                                    </p>
                                 </div>
+
                                 <div class="col-md-6">
                                     <h6>Last Visit</h6>
-                                    <p class="small mb-3">14 jan </p>
+                                    <p class="small mb-3">14 jan</p>
+
                                     <h6>Next Visit</h6>
-                                    <p class="small mb-3">30 Sep </p>
+                                    <p class="small mb-3">30 Sep</p>
+
                                     <h6>Allergies</h6>
-                                    <p class="small mb-3">Peanuts, Penicillin </p>
+                                    <p class="small mb-3">
+                                        Peanuts, Penicillin
+                                    </p>
+
                                     <h6>Diagnosis History</h6>
-                                    <p class="small mb-3">No major surgeries. Family History of hypertension.</p>
+                                    <p class="small mb-3">
+                                        No major surgeries. Family History of hypertension.
+                                    </p>
                                 </div>
+
                             </div>
                         </div>
+
                     </div>
 
+                    <!-- PATIENT 2 -->
                     <div class="card dash-card patient-row p-3 mb-3">
+
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
+
                             <div>
                                 <strong class="dash-heading">G. Manalo</strong>
-                                <span class="patient-id">· Patient ID: PT-0005</span>
-                                <div class="dash-subtext small">G. Manalo@email.com · (04) 987 6543</div>
+
+                                <span class="patient-id">
+                                    · Patient ID: PT-0005
+                                </span>
+
+                                <div class="dash-subtext small">
+                                    G. Manalo@email.com · (04) 987 6543
+                                </div>
                             </div>
+
                             <div class="mt-2 mt-md-0">
-                                <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-manalo">View Details</button>
-                                <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('G. Manalo')">Add Note</button>
+
+                                <button class="btn btn-sm btn-action-blue mr-1"
+                                        data-toggle="collapse"
+                                        data-target="#detail-manalo">
+                                    View Details
+                                </button>
+
+                                <button class="btn btn-sm btn-action-green"
+                                        data-toggle="modal"
+                                        data-target="#noteModal"
+                                        onclick="setNotePatient('G. Manalo')">
+                                    Add Note
+                                </button>
+
                             </div>
+
                         </div>
-                        <div class="collapse patient-detail p-3 mt-3" id="detail-manalo">
+
+                        <div class="collapse patient-detail p-3 mt-3"
+                             id="detail-manalo">
+
                             <div class="row">
+
                                 <div class="col-md-6">
                                     <h6>Age</h6>
                                     <p class="small mb-3">25 years</p>
+
                                     <h6>DOB</h6>
                                     <p class="small mb-3">24 Nov 2000</p>
+
                                     <h6>Gender</h6>
                                     <p class="small mb-3">Female</p>
+
                                     <h6>Medical History</h6>
-                                    <p class="small mb-3">Migraine - 15 Sep.</p>
+                                    <p class="small mb-3">
+                                        Migraine - 15 Sep.
+                                    </p>
                                 </div>
+
                                 <div class="col-md-6">
                                     <h6>Last Visit</h6>
-                                    <p class="small mb-3">15 Sep </p>
+                                    <p class="small mb-3">15 Sep</p>
+
                                     <h6>Next Visit</h6>
-                                    <p class="small mb-3">30 Sep </p>
+                                    <p class="small mb-3">30 Sep</p>
+
                                     <h6>Allergies</h6>
-                                    <p class="small mb-3">None Recorded </p>
+                                    <p class="small mb-3">
+                                        None Recorded
+                                    </p>
+
                                     <h6>Diagnosis History</h6>
-                                    <p class="small mb-3">No major surgeries. No chronic conditions. </p>
+                                    <p class="small mb-3">
+                                        No major surgeries. No chronic conditions.
+                                    </p>
                                 </div>
+
                             </div>
                         </div>
+
                     </div>
 
+                    <!-- PATIENT 3 -->
                     <div class="card dash-card patient-row p-3 mb-3">
+
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
+
                             <div>
-                                <strong class="dash-heading">M. Dhungana</strong>
-                                <span class="patient-id">· Patient ID:PT-0003</span>
-                                <div class="dash-subtext small">M. Dhungana@email.com · (04) 123 4567</div>
+                                <strong class="dash-heading">
+                                    M. Dhungana
+                                </strong>
+
+                                <span class="patient-id">
+                                    · Patient ID:PT-0003
+                                </span>
+
+                                <div class="dash-subtext small">
+                                    M. Dhungana@email.com · (04) 123 4567
+                                </div>
                             </div>
+
                             <div class="mt-2 mt-md-0">
-                                <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-dhungana">View Details</button>
-                                <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('M. Dhungana')">Add Note</button>
+
+                                <button class="btn btn-sm btn-action-blue mr-1"
+                                        data-toggle="collapse"
+                                        data-target="#detail-dhungana">
+                                    View Details
+                                </button>
+
+                                <button class="btn btn-sm btn-action-green"
+                                        data-toggle="modal"
+                                        data-target="#noteModal"
+                                        onclick="setNotePatient('M. Dhungana')">
+                                    Add Note
+                                </button>
+
                             </div>
+
                         </div>
-                        <div class="collapse patient-detail p-3 mt-3" id="detail-dhungana">
+
+                        <div class="collapse patient-detail p-3 mt-3"
+                             id="detail-dhungana">
+
                             <div class="row">
+
                                 <div class="col-md-6">
                                     <h6>Name</h6>
-                                    <p class="small mb-3">Madhav Dhungana</p>
+                                    <p class="small mb-3">
+                                        Madhav Dhungana
+                                    </p>
+
                                     <h6>Age</h6>
                                     <p class="small mb-3">21 years</p>
+
                                     <h6>DOB</h6>
                                     <p class="small mb-3">10 May 2005</p>
+
                                     <h6>Gender</h6>
                                     <p class="small mb-3">Male</p>
+
                                     <h6>Medical History</h6>
-                                    <p class="small mb-3">Sprained ankle - 04 March 2026.</p>
+                                    <p class="small mb-3">
+                                        Sprained ankle - 04 March 2026.
+                                    </p>
                                 </div>
+
                                 <div class="col-md-6">
                                     <h6>Last Visit</h6>
                                     <p class="small mb-3">04 March</p>
+
                                     <h6>Next Visit</h6>
                                     <p class="small mb-3">30 Sep</p>
+
                                     <h6>Allergies</h6>
                                     <p class="small mb-3">Shellfish</p>
+
                                     <h6>Diagnosis History</h6>
-                                    <p class="small mb-3">No major surgeries. No chronic conditions.</p>
+                                    <p class="small mb-3">
+                                        No major surgeries. No chronic conditions.
+                                    </p>
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div>
 
+                    <!-- PATIENT 4 -->
                     <div class="card dash-card patient-row p-3 mb-3">
+
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
+
                             <div>
-                                <strong class="dash-heading">K. Juhoon</strong>
-                                <span class="patient-id">· Patient ID: PT-0007</span>
-                                <div class="dash-subtext small">K. Juhoon@email.com · (04) 777 2468</div>
+                                <strong class="dash-heading">
+                                    K. Juhoon
+                                </strong>
+
+                                <span class="patient-id">
+                                    · Patient ID: PT-0007
+                                </span>
+
+                                <div class="dash-subtext small">
+                                    K. Juhoon@email.com · (04) 777 2468
+                                </div>
                             </div>
+
                             <div class="mt-2 mt-md-0">
-                                <button class="btn btn-sm btn-action-blue mr-1" data-toggle="collapse" data-target="#detail-juhoon">View Details</button>
-                                <button class="btn btn-sm btn-action-green" data-toggle="modal" data-target="#noteModal" onclick="setNotePatient('K. Juhoon')">Add Note</button>
+
+                                <button class="btn btn-sm btn-action-blue mr-1"
+                                        data-toggle="collapse"
+                                        data-target="#detail-juhoon">
+                                    View Details
+                                </button>
+
+                                <button class="btn btn-sm btn-action-green"
+                                        data-toggle="modal"
+                                        data-target="#noteModal"
+                                        onclick="setNotePatient('K. Juhoon')">
+                                    Add Note
+                                </button>
+
                             </div>
+
                         </div>
-                        <div class="collapse patient-detail p-3 mt-3" id="detail-juhoon">
+
+                        <div class="collapse patient-detail p-3 mt-3"
+                             id="detail-juhoon">
+
                             <div class="row">
+
                                 <div class="col-md-6">
-                                    <h6>Name </h6>
+                                    <h6>Name</h6>
                                     <p class="small mb-3">Kim Juhoon</p>
+
                                     <h6>Age</h6>
                                     <p class="small mb-3">19 years</p>
+
                                     <h6>DOB</h6>
                                     <p class="small mb-3">14 jan 2007</p>
+
                                     <h6>Gender</h6>
                                     <p class="small mb-3">Female</p>
+
                                     <h6>Medical History</h6>
-                                    <p class="small mb-3">Mild asthma diagnosed - 07 May.</p>
+                                    <p class="small mb-3">
+                                        Mild asthma diagnosed - 07 May.
+                                    </p>
                                 </div>
+
                                 <div class="col-md-6">
                                     <h6>Last Visit</h6>
                                     <p class="small mb-3">07 May</p>
+
                                     <h6>Next Visit</h6>
                                     <p class="small mb-3">02 Oct</p>
+
                                     <h6>Allergies</h6>
                                     <p class="small mb-3">Pollen</p>
+
                                     <h6>Diagnosis History</h6>
-                                    <p class="small mb-3">Asthma since childhood. No surgeries.</p>
+                                    <p class="small mb-3">
+                                        Asthma since childhood. No surgeries.
+                                    </p>
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+                                <!-- DOCTORS -->
+                <div class="tab-pane fade"
+                     id="doctors"
+                     role="tabpanel">
 
-                <div class="tab-pane fade" id="doctors" role="tabpanel">
-                    <h5 class="dash-heading ralewayextrabold mb-3">List of Doctors</h5>
+                    <h5 class="dash-heading ralewayextrabold mb-3">
+                        List of Doctors
+                    </h5>
 
                     <div class="card doctor-card p-3 mb-3">
+
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
+
                             <div class="d-flex align-items-center">
-                                <div class="doctor-avatar mr-3">CN</div>
-                                <div>
-                                    <strong class="dash-heading">Dr. Chauncey Nieto</strong>
-                                    <div class="dash-subtext small">General Practitioner</div>
+
+                                <div class="doctor-avatar mr-3">
+                                    CN
                                 </div>
+
+                                <div>
+                                    <strong class="dash-heading">
+                                        Dr. Chauncey Nieto
+                                    </strong>
+
+                                    <div class="dash-subtext small">
+                                        General Practitioner
+                                    </div>
+                                </div>
+
                             </div>
-                            <span class="badge badge-success mt-2 mt-md-0">Available</span>
+
+                            <span class="badge badge-success mt-2 mt-md-0">
+                                Available
+                            </span>
+
                         </div>
 
                         <div class="row mt-3">
+
                             <div class="col-md-4 mb-2">
                                 <strong>Specialization</strong>
-                                <div class="dash-subtext">General Practitioner</div>
+                                <div class="dash-subtext">
+                                    General Practitioner
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
                                 <strong>Doctor ID</strong>
-                                <div class="dash-subtext">DOC-001</div>
+                                <div class="dash-subtext">
+                                    DOC-001
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
                                 <strong>Email</strong>
-                                <div class="dash-subtext">chauncey@example.com</div>
+                                <div class="dash-subtext">
+                                    chauncey@example.com
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
                                 <strong>Phone</strong>
-                                <div class="dash-subtext">0400 123 456</div>
+                                <div class="dash-subtext">
+                                    0400 123 456
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
-                                <strong>Availability <br> Wed-30 sep</strong>
-                                <div class="dash-subtext">Available&#x20;</div>
+                                <strong>
+                                    Availability <br> Wed-30 sep
+                                </strong>
+
+                                <div class="dash-subtext">
+                                    Available
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
                                 <strong>Working Hours</strong>
-                                <div class="dash-subtext">9:00am – 5:00pm</div>
+                                <div class="dash-subtext">
+                                    9:00am – 5:00pm
+                                </div>
                             </div>
+
                         </div>
+
                     </div>
 
                     <div class="card doctor-card p-3 mb-3">
+
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
+
                             <div class="d-flex align-items-center">
-                                <div class="doctor-avatar mr-3">YC</div>
-                                <div>
-                                    <strong class="dash-heading">Dr. Yufan Chao</strong>
-                                    <div class="dash-subtext small">Psychiatrist</div>
+
+                                <div class="doctor-avatar mr-3">
+                                    YC
                                 </div>
+
+                                <div>
+                                    <strong class="dash-heading">
+                                        Dr. Yufan Chao
+                                    </strong>
+
+                                    <div class="dash-subtext small">
+                                        Psychiatrist
+                                    </div>
+                                </div>
+
                             </div>
-                            <span class="badge badge-warning mt-2 mt-md-0">Busy</span>
+
+                            <span class="badge badge-warning mt-2 mt-md-0">
+                                Busy
+                            </span>
+
                         </div>
 
                         <div class="row mt-3">
+
                             <div class="col-md-4 mb-2">
                                 <strong>Specialization</strong>
-                                <div class="dash-subtext">Psychiatrist</div>
+                                <div class="dash-subtext">
+                                    Psychiatrist
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
                                 <strong>Doctor ID</strong>
-                                <div class="dash-subtext">DOC-002</div>
+                                <div class="dash-subtext">
+                                    DOC-002
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
                                 <strong>Email</strong>
-                                <div class="dash-subtext">yufan@example.com</div>
+                                <div class="dash-subtext">
+                                    yufan@example.com
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
                                 <strong>Phone</strong>
-                                <div class="dash-subtext">0400 234 567</div>
+                                <div class="dash-subtext">
+                                    0400 234 567
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
-                                <strong>Availability <br> Wed 30 Sep</strong>
-                                <div class="dash-subtext">Busy</div>
+                                <strong>
+                                    Availability <br> Wed 30 Sep
+                                </strong>
+
+                                <div class="dash-subtext">
+                                    Busy
+                                </div>
                             </div>
+
                             <div class="col-md-4 mb-2">
                                 <strong>Working Hours</strong>
-                                <div class="dash-subtext">8:00am – 4:00pm</div>
+                                <div class="dash-subtext">
+                                    8:00am – 4:00pm
+                                </div>
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
 
             </div>
         </div>
     </div>
-</section>
 
-<div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-hidden="true">
+</section>   
+<!-- ADD NOTE MODAL -->
+<div class="modal fade"
+     id="noteModal"
+     tabindex="-1"
+     role="dialog"
+     aria-hidden="true">
+
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+
             <div class="modal-header">
-                <h5 class="modal-title dash-heading">Add Note — <span id="notePatientName"></span></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                <h5 class="modal-title dash-heading">
+                    Add Note —
+                    <span id="notePatientName"></span>
+                </h5>
+
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
             </div>
+
             <div class="modal-body">
+
                 <div class="form-group">
-                    <label class="dash-subtext small">Diagnosis</label>
-                    <input type="text" class="form-control" placeholder="e.g. Mild hypertension">
+                    <label class="dash-subtext small">
+                        Diagnosis
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="e.g. Mild hypertension">
                 </div>
+
                 <div class="form-group">
-                    <label class="dash-subtext small">Prescription</label>
-                    <input type="text" class="form-control" placeholder="e.g. Lisinopril 10mg — daily">
+                    <label class="dash-subtext small">
+                        Prescription
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="e.g. Lisinopril 10mg — daily">
                 </div>
+
                 <div class="form-group">
-                    <label class="dash-subtext small">Test Request</label>
-                    <input type="text" class="form-control" placeholder="e.g. Blood panel">
+                    <label class="dash-subtext small">
+                        Test Request
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="e.g. Blood panel">
                 </div>
+
                 <div class="form-group mb-0">
-                    <label class="dash-subtext small">Notes</label>
-                    <textarea class="form-control" rows="3" placeholder="Add any additional notes..."></textarea>
+                    <label class="dash-subtext small">
+                        Notes
+                    </label>
+
+                    <textarea class="form-control"
+                              rows="3"
+                              placeholder="Add any additional notes..."></textarea>
                 </div>
+
             </div>
+
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-action-blue" data-dismiss="modal">Save Note</button>
+
+                <button type="button"
+                        class="btn btn-outline-secondary"
+                        data-dismiss="modal">
+                    Cancel
+                </button>
+
+                <button type="button"
+                        class="btn btn-action-blue"
+                        data-dismiss="modal">
+                    Save Note
+                </button>
+
             </div>
+
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="prescriptionModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+<!-- PRESCRIPTION MODAL -->
+<div class="modal fade"
+     id="prescriptionModal"
+     tabindex="-1"
+     role="dialog"
+     aria-hidden="true">
+
     <div class="modal-dialog" role="document">
+
         <div class="modal-content">
+
             <div class="modal-header">
-                <h5 class="modal-title dash-heading">Create Prescription — <span id="rxPatientName"></span></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                <h5 class="modal-title dash-heading">
+                    Create Prescription —
+                    <span id="rxPatientName"></span>
+                </h5>
+
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
             </div>
+
             <div class="modal-body">
+
                 <input type="hidden" id="selectedPatient">
+
                 <div class="form-group">
-                    <label class="dash-subtext small">Patient ID</label>
-                    <input type="text" id="patientId" class="form-control" placeholder="Enter Patient ID" required>
+
+                    <label class="dash-subtext small">
+                        Patient ID
+                    </label>
+
+                    <input type="text"
+                           id="patientId"
+                           class="form-control"
+                           placeholder="Enter Patient ID"
+                           required>
+
                 </div>
+
                 <div class="form-group">
-                    <label class="dash-subtext small">Medication / Prescription</label>
-                    <input type="text" id="rxMedication" class="form-control" placeholder="e.g. Amoxicillin 500mg — 3x daily for 7 days">
+
+                    <label class="dash-subtext small">
+                        Medication / Prescription
+                    </label>
+
+                    <input type="text"
+                           id="rxMedication"
+                           class="form-control"
+                           placeholder="e.g. Amoxicillin 500mg — 3x daily for 7 days">
+
                 </div>
+
                 <div class="form-group mb-3">
-                    <label class="dash-subtext small">Notes for Patient</label>
-                    <textarea id="rxNotes" class="form-control" rows="3" placeholder="Additional instructions or notes for the patient..."></textarea>
+
+                    <label class="dash-subtext small">
+                        Notes for Patient
+                    </label>
+
+                    <textarea id="rxNotes"
+                              class="form-control"
+                              rows="3"
+                              placeholder="Additional instructions or notes for the patient..."></textarea>
+
                 </div>
-                <div class="form-group"><label><input type="checkbox" id="notifySMS"> Send SMS to Patient</label></div>
-                <div class="form-group mb-0"><label><input type="checkbox" id="sendPharmacy"> Send to Partner Pharmacy</label></div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="notifySMS">
+                        Send SMS to Patient
+                    </label>
+                </div>
+
+                <div class="form-group mb-0">
+                    <label>
+                        <input type="checkbox" id="sendPharmacy">
+                        Send to Partner Pharmacy
+                    </label>
+                </div>
+
             </div>
+
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-success" onclick="confirmPrescription()">Confirm & Send</button>
+
+                <button type="button"
+                        class="btn btn-outline-secondary"
+                        data-dismiss="modal">
+                    Cancel
+                </button>
+
+                <button type="button"
+                        class="btn btn-success"
+                        onclick="confirmPrescription()">
+                    Confirm & Send
+                </button>
+
             </div>
+
         </div>
+
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
 
 <footer class="text-center text-lg-start bg-body-tertiary text-muted footer">
-    <section class="">
+
+    <section>
+
         <div class="container text-center text-md-start mt-5">
+
             <div class="row mt-3">
+
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
                     <h6 class="fw-bold mb-4">
-                        <a class="fas fa-gem me-3 norwester footer-text2" href="index.html"><img class="logo" src="../images/logoo.png" alt="SmartClinic+ Logo" title="SmartClinic+ logo">SmartClinic+</a>
+
+                        <a class="fas fa-gem me-3 norwester footer-text2"
+                           href="index.html">
+
+                            <img class="logo"
+                                 src="../images/logoo.png"
+                                 alt="SmartClinic+ Logo"
+                                 title="SmartClinic+ logo">
+
+                            SmartClinic+
+
+                        </a>
+
                     </h6>
-                    <p class="footer-text1 ralewaybold">Intelligent Healthcare Management System</p>
+
+                    <p class="footer-text1 ralewaybold">
+                        Intelligent Healthcare Management System
+                    </p>
+
                 </div>
 
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">Quick links</h6>
-                    <p><a href="index.html" class="footer-links ralewaybold">Home</a></p>
-                    <p><a href="patients.html" class="footer-links ralewaybold">Booking</a></p>
-                    <p><a href="patients.html" class="footer-links ralewaybold">Patients</a></p>
+
+                    <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">
+                        Quick links
+                    </h6>
+
+                    <p>
+                        <a href="index.html"
+                           class="footer-links ralewaybold">
+                            Home
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="patients.html"
+                           class="footer-links ralewaybold">
+                            Booking
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="patients.html"
+                           class="footer-links ralewaybold">
+                            Patients
+                        </a>
+                    </p>
+
                 </div>
 
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">OTHERS</h6>
-                    <p><a href="#" class="footer-links ralewaybold">About</a></p>
-                    <p><a href="#" class="footer-links ralewaybold">Contact</a></p>
-                    <p><a href="#" class="footer-links ralewaybold">Privacy Policy and Terms</a></p>
+
+                    <h6 class="text-uppercase ralewayextrabold footer-text1 mb-4">
+                        OTHERS
+                    </h6>
+
+                    <p>
+                        <a href="#"
+                           class="footer-links ralewaybold">
+                            About
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="#"
+                           class="footer-links ralewaybold">
+                            Contact
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="#"
+                           class="footer-links ralewaybold">
+                            Privacy Policy and Terms
+                        </a>
+                    </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <div class="text-center p-4">
-        <p class="ralewaybold footer-text2">&copy; SmartClinic+. All rights reserved.</p>
-    </div>
-</footer>
 
+        <p class="ralewaybold footer-text2">
+            &copy; SmartClinic+. All rights reserved.
+        </p>
+
+    </div>
+
+</footer> 
 <script>
+
 var statusClassMap = {
     'Waiting': 'badge-waiting',
     'In Progress': 'badge-inprogress',
@@ -582,19 +1338,32 @@ var statusClassMap = {
 function setStatus(btn, newStatus) {
     var tr = btn.closest('tr');
     var badge = tr.querySelector('.appt-status');
-    badge.className = 'badge appt-status ' + statusClassMap[newStatus];
+
+    badge.className =
+        'badge appt-status ' + statusClassMap[newStatus];
+
     badge.textContent = newStatus;
 
-    if (newStatus === 'Completed' || newStatus === 'Cancelled') {
-        var actionsCell = tr.querySelector('td:last-child');
-        actionsCell.innerHTML = '<span class="dash-subtext small">' + newStatus + '</span>';
+    if (newStatus === 'Completed' ||
+        newStatus === 'Cancelled') {
+
+        var actionsCell = btn.closest('td');
+
+        actionsCell.innerHTML =
+            '<span class="dash-subtext small">' +
+            newStatus +
+            '</span>';
     }
 }
 
 function reschedule(btn) {
     var tr = btn.closest('tr');
     var timeCell = tr.children[1];
-    var newTime = prompt('Enter new time for this appointment:', timeCell.textContent.trim());
+
+    var newTime = prompt(
+        'Enter new time for this appointment:',
+        timeCell.textContent.trim()
+    );
 
     if (newTime) {
         timeCell.textContent = newTime;
@@ -602,23 +1371,42 @@ function reschedule(btn) {
 }
 
 function openPrescription(patientName) {
-    document.getElementById("rxPatientName").textContent = patientName;
-    document.getElementById("selectedPatient").value = patientName;
+
+    document.getElementById("rxPatientName").textContent =
+        patientName;
+
+    document.getElementById("selectedPatient").value =
+        patientName;
+
     document.getElementById("patientId").value = "";
     document.getElementById("rxMedication").value = "";
     document.getElementById("rxNotes").value = "";
+
     document.getElementById("notifySMS").checked = false;
     document.getElementById("sendPharmacy").checked = false;
+
     $('#prescriptionModal').modal('show');
 }
 
 function confirmPrescription() {
-    let patient = document.getElementById("selectedPatient").value;
-    let patientId = document.getElementById("patientId").value.trim();
-    let medication = document.getElementById("rxMedication").value.trim();
-    let notes = document.getElementById("rxNotes").value.trim();
-    let sms = document.getElementById("notifySMS").checked;
-    let pharmacy = document.getElementById("sendPharmacy").checked;
+
+    let patient =
+        document.getElementById("selectedPatient").value;
+
+    let patientId =
+        document.getElementById("patientId").value.trim();
+
+    let medication =
+        document.getElementById("rxMedication").value.trim();
+
+    let notes =
+        document.getElementById("rxNotes").value.trim();
+
+    let sms =
+        document.getElementById("notifySMS").checked;
+
+    let pharmacy =
+        document.getElementById("sendPharmacy").checked;
 
     if (patientId === "") {
         alert("Please enter Patient ID.");
@@ -636,8 +1424,14 @@ function confirmPrescription() {
     }
 
     var sentVia = [];
-    if (sms) sentVia.push("SMS");
-    if (pharmacy) sentVia.push("Partner Pharmacy");
+
+    if (sms) {
+        sentVia.push("SMS");
+    }
+
+    if (pharmacy) {
+        sentVia.push("Partner Pharmacy");
+    }
 
     alert(
         "Prescription confirmed!\n\n" +
@@ -652,60 +1446,108 @@ function confirmPrescription() {
 }
 
 function setNotePatient(name) {
-    document.getElementById('notePatientName').textContent = name;
+    document.getElementById('notePatientName').textContent =
+        name;
 }
 
 var availabilityMap = {
-    available: ['badge-available', 'Available', '9:00am – 5:00pm'],
-    busy: ['badge-busy', 'Busy', '9:00am – 5:00pm'],
-    offline: ['badge-offline', 'Offline', 'Not working today']
+    available: [
+        'badge-available',
+        'Available',
+        '9:00am – 5:00pm'
+    ],
+
+    busy: [
+        'badge-busy',
+        'Busy',
+        '9:00am – 5:00pm'
+    ],
+
+    offline: [
+        'badge-offline',
+        'Offline',
+        'Not working today'
+    ]
 };
 
 function updateAvailability(select) {
-    var badge = document.getElementById('myAvailabilityBadge');
-    var hours = document.getElementById('myWorkingHours');
+
+    var badge =
+        document.getElementById('myAvailabilityBadge');
+
+    var hours =
+        document.getElementById('myWorkingHours');
+
     var v = availabilityMap[select.value];
+
+    if (!badge || !hours || !v) {
+        return;
+    }
+
     badge.className = 'badge ' + v[0];
     badge.textContent = v[1];
     hours.textContent = 'Working hours: ' + v[2];
 }
 
+
 fetch("http://localhost:7070/queue")
     .then(response => response.json())
     .then(appointments => {
-        const queue = document.getElementById("appointmentQueue");
+
+        const queue =
+            document.getElementById("appointmentQueue");
+
         queue.innerHTML = "";
 
         appointments.forEach(appointment => {
-            const row = document.createElement("tr");
-            const startTime = appointment.start_time.substring(0, 5);
-            const endTime = appointment.end_time.substring(0, 5);
+
+            const row =
+                document.createElement("tr");
+
+            const startTime =
+                appointment.start_time.substring(0, 5);
+
+            const endTime =
+                appointment.end_time.substring(0, 5);
+
+            let actionButton;
+
+            if (appointment.status === "In Progress") {
+
+                actionButton = `
+                    <button class="btn btn-sm btn-action-green"
+                            onclick="completeQueue(${appointment.queue_id})">
+                        Complete
+                    </button>
+                `;
+
+            } else {
+
+                actionButton = `
+                    <button class="btn btn-sm btn-action-blue"
+                            onclick="startQueue(${appointment.queue_id})">
+                        Start
+                    </button>
+                `;
+            }
 
             row.innerHTML = `
                 <td>${appointment.patient_name}</td>
-                <td>${startTime}–${endTime}</td>
+
+                <td>
+                    ${startTime}–${endTime}
+                </td>
+
                 <td>
                     <span class="badge badge-waiting">
                         ${appointment.status}
                     </span>
                 </td>
+
                 <td class="text-right">
-                    ${
-                        appointment.status === "In Progress"
-                        ? `
-                            <button class="btn btn-sm btn-action-green"
-                                    onclick="completeQueue(${appointment.queue_id})">
-                                Complete
-                            </button>
-                          `
-                        : `
-                            <button class="btn btn-sm btn-action-blue"
-                                    onclick="startQueue(${appointment.queue_id})">
-                                Start
-                            </button>
-                          `
-                    }
+                    ${actionButton}
                 </td>
+
                 <td>
                     <button class="btn btn-sm btn-primary"
                             onclick="openPrescription('${appointment.patient_name}')">
@@ -715,54 +1557,90 @@ fetch("http://localhost:7070/queue")
             `;
 
             queue.appendChild(row);
+
         });
+
     })
     .catch(error => {
-        console.log("Error loading appointments:", error);
+        console.log(
+            "Error loading appointments:",
+            error
+        );
     });
+
 
 function startQueue(queueId) {
-    fetch("http://localhost:7070/queue/" + queueId + "/start", {
-        method: "PUT"
-    })
+
+    fetch(
+        "http://localhost:7070/queue/" +
+        queueId +
+        "/start",
+        {
+            method: "PUT"
+        }
+    )
     .then(response => {
+
         if (!response.ok) {
-            throw new Error("Could not start appointment.");
+            throw new Error(
+                "Could not start appointment."
+            );
         }
 
         return response.text();
+
     })
     .then(message => {
+
         alert(message);
         location.reload();
+
     })
     .catch(error => {
+
         console.log("Error:", error);
         alert("Could not start appointment.");
+
     });
 }
 
+
 function completeQueue(queueId) {
-    fetch("http://localhost:7070/queue/" + queueId + "/complete", {
-        method: "PUT"
-    })
+
+    fetch(
+        "http://localhost:7070/queue/" +
+        queueId +
+        "/complete",
+        {
+            method: "PUT"
+        }
+    )
     .then(response => {
+
         if (!response.ok) {
-            throw new Error("Could not complete appointment.");
+            throw new Error(
+                "Could not complete appointment."
+            );
         }
 
         return response.text();
+
     })
     .then(message => {
+
         alert(message);
         location.reload();
+
     })
     .catch(error => {
+
         console.log("Error:", error);
         alert("Could not complete appointment.");
+
     });
 }
+
 </script>
 
 </body>
-</html>
+</html>                      
